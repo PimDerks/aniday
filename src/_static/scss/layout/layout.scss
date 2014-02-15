@@ -1,0 +1,12 @@
+body {
+  background:#171717;
+}
+
+.wrapper {
+
+  @include respond-min(10em){
+    margin:0 auto;
+    max-width:800px;
+  }
+
+}

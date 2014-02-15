@@ -37,6 +37,7 @@
 ----------------------------------------------- */
 
 body {
+  color:$color-white;
   font-family:$font-robot;
   font-size:87.5%; /* 14 */
   line-height:1.5;
@@ -187,4 +188,33 @@ img {
 ----------------------------------------------- */
 
 ::selection {
+  background:$color-primary;
+  color:$color-white;
+  
+}
+
+/* Links
+----------------------------------------------- */
+a {
+  color:$color-primary;
+
+  &:link,
+  &:visited {
+    text-decoration:underline;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    text-decoration:none;
+  }
+
+}
+
+/* Images
+----------------------------------------------- */
+img {
+  margin:0 0 1.5em;
+  max-width:100%;
+  vertical-align:bottom;
 }
