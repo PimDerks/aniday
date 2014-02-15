@@ -1,54 +1,33 @@
-<!DOCTYPE html>
-<html class="no-js" lang="nl">
-<head>
+{% include document/document-open.html %}
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    {% include document/document-head.html %}
 
-    <meta name="author" content="Pim Derks" />
-    <meta name="description" content="{{ page.description }}" />
+    <body>
 
-    <title>{{ page.title }}</title>
+        <a id="toggle" href="#" style="position:fixed; top:3em; right:0; background:white; padding:.75em;">toggle baseline</a>
+        <script>
+            var link = document.getElementById('toggle');
+            link.addEventListener('click',function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                if(document.body.classList.contains('baseline')){
+                    document.body.classList.remove('baseline');
+                } else {
+                    document.body.classList.add('baseline');
+                }
+            });
+        </script>
 
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="{{ site.path }}/_static/css/styles.ie.min.css" />
-    <script src="{{ site.path }}/_static/js/shim/html5shiv-printshiv.js"></script>
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <script>document.documentElement.className = 'js';</script>
-    <link rel="stylesheet" href="{{ site.path }}/_static/css/styles.min.css" />
-    <script src="{{ site.path }}/_static/js/vendor/paulirish/modernizr.js"></script>
-    <!--<![endif]-->
+        {% include layout/header.html %}
 
-</head>
-<body>
+        <div class="wrapper">
+            {{ content }}
+        </div>
 
-    <a id="toggle" href="#" style="position:fixed; top:3em; right:0; background:white; padding:.75em;">toggle baseline</a>
-    <script>
-        var link = document.getElementById('toggle');
-        link.addEventListener('click',function(e){
-            e.preventDefault();
-            e.stopPropagation();
-            if(document.body.classList.contains('baseline')){
-                document.body.classList.remove('baseline');
-            } else {
-                document.body.classList.add('baseline');
-            }
-        });
-    </script>
+        {% include layout/footer.html %}
 
-    <div data-module="ui/Test"></div>
+    </body>
 
-    {{ content }}
+    {% include document/document-scripts.html %}
 
-    <!--[if lte IE 9]>
-    <script src="{{ site.path }}/_static/js/shim/all.js"></script>
-    <![endif]-->
-
-    <!--[if gt IE 8]><!-->
-    <script data-main="{{ site.path }}/_static/js/aniday/main" src="{{ site.path }}/_static/js/vendor/jrburke/require.js"></script>
-    <!--<![endif]-->
-
-</body>
-</html>
+{% include document/document-close.html %}
