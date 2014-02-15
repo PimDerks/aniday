@@ -1,24 +1,54 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{{ page.title }}</title>
-        <link rel="stylesheet" href="{{ site.path }}/_static/css/screen.css" />
-    </head>
-    <body>
+<html class="no-js" lang="nl">
+<head>
 
-        <header>
-            <h1>Aniday</h1>
-        </header>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        {% include navigation/main-navigation.html %}
+    <meta name="author" content="Pim Derks" />
+    <meta name="description" content="{{ page.description }}" />
 
-        {{ content }}
+    <title>{{ page.title }}</title>
 
-        <footer>
-            Copyright 2009-2014.
-        </footer>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="{{ site.path }}/_static/css/styles.ie.min.css" />
+    <script src="{{ site.path }}/_static/js/shim/html5shiv-printshiv.js"></script>
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <script>document.documentElement.className = 'js';</script>
+    <link rel="stylesheet" href="{{ site.path }}/_static/css/styles.min.css" />
+    <script src="{{ site.path }}/_static/js/vendor/paulirish/modernizr.js"></script>
+    <!--<![endif]-->
 
-    </body>
+</head>
+<body>
+
+    <a id="toggle" href="#" style="position:fixed; top:3em; right:0; background:white; padding:.75em;">toggle baseline</a>
+    <script>
+        var link = document.getElementById('toggle');
+        link.addEventListener('click',function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            if(document.body.classList.contains('baseline')){
+                document.body.classList.remove('baseline');
+            } else {
+                document.body.classList.add('baseline');
+            }
+        });
+    </script>
+
+    <div data-module="ui/Test"></div>
+
+    {{ content }}
+
+    <!--[if lte IE 9]>
+    <script src="{{ site.path }}/_static/js/shim/all.js"></script>
+    <![endif]-->
+
+    <!--[if gt IE 8]><!-->
+    <script data-main="{{ site.path }}/_static/js/aniday/main" src="{{ site.path }}/_static/js/vendor/jrburke/require.js"></script>
+    <!--<![endif]-->
+
+</body>
 </html>
