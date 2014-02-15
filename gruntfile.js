@@ -171,6 +171,16 @@ module.exports = function(grunt) {
                         dest:'<%= env.site %>/_static/'
                     }
                 ]
+            },
+            media:{
+                files:[
+                    {
+                        expand:true,
+                        cwd:'<%= env.src %>/_media/',
+                        src:'**',
+                        dest:'<%= env.site %>/_media/'
+                    }
+                ]
             }
         },
 
@@ -272,7 +282,7 @@ module.exports = function(grunt) {
     grunt.registerTask('_js',['jshint','uglify:all','requirejs','uglify:shim']);
 
     // 'private' html build set
-    grunt.registerTask('_html',['jekyll','clean:static','copy:static']);
+    grunt.registerTask('_html',['jekyll','clean:static','copy:static','copy:media']);
 
     /**
      * Quick build of the project
