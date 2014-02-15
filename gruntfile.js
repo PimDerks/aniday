@@ -214,7 +214,7 @@ module.exports = function(grunt) {
                 tasks:['_js','copy:static']
             },
             jekyll:{
-                files:['<%= env.src %>/**/*.html'],
+                files:['<%= env.src %>/**/*.html','<%= env.src %>/**/*.markdown'],
                 tasks:['_html']
             }
         },
