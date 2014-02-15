@@ -1,20 +1,43 @@
 /* Import fonts
 ----------------------------------------------- */
 
-/* @font-face {
-  font-family: 'open_sansregular';
-  src: url('../assets/fonts/opensans-regular/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../assets/fonts/opensans-regular/OpenSans-Regular-webfont.woff') format('woff'),
-  url('../assets/fonts/opensans-regular/OpenSans-Regular-webfont.ttf') format('truetype'),
-  url('../assets/fonts/opensans-regular/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+@font-face {
+  font-family: 'roboto';
+  src: url('../assets/fonts/robotoslab_light/RobotoSlab-Light-webfont.eot');
+  src: url('../assets/fonts/robotoslab_light/RobotoSlab-Light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/robotoslab_light/RobotoSlab-Light-webfont.woff') format('woff'),
+  url('../assets/fonts/robotoslab_light/RobotoSlab-Light-webfont.ttf') format('truetype'),
+  url('../assets/fonts/robotoslab_light/RobotoSlab-Light-webfont.svg#roboto_slablight') format('svg');
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('../assets/fonts/robotoslab_regular/RobotoSlab-Regular-webfont.eot');
+  src: url('../assets/fonts/robotoslab_regular/RobotoSlab-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/robotoslab_regular/RobotoSlab-Regular-webfont.woff') format('woff'),
+  url('../assets/fonts/robotoslab_regular/RobotoSlab-Regular-webfont.ttf') format('truetype'),
+  url('../assets/fonts/robotoslab_regular/RobotoSlab-Regular-webfont.svg#roboto_slabregular') format('svg');
   font-weight: normal;
-  font-style: normal;
-} */
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url('../assets/fonts/robotoslab_bold/RobotoSlab-Bold-webfont.eot');
+  src: url('../assets/fonts/robotoslab_bold/RobotoSlab-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/robotoslab_bold/RobotoSlab-Bold-webfont.woff') format('woff'),
+  url('../assets/fonts/robotoslab_bold/RobotoSlab-Bold-webfont.ttf') format('truetype'),
+  url('../assets/fonts/robotoslab_bold/RobotoSlab-Bold-webfont.svg#roboto_slabbold') format('svg');
+  font-weight: bold;
+}
+
+
 
 /* Responsive baseline
 ----------------------------------------------- */
 
 body {
+  font-family:$font-robot;
   font-size:87.5%; /* 14 */
   line-height:1.5;
 }
@@ -62,6 +85,7 @@ h2,
 h3,
 h4,
 h5 {
+  font-family:$font-arial;
   font-size:1em;
   margin-bottom:1.5em;
   margin-top:0;
