@@ -1,0 +1,253 @@
+---
+layout: default
+title: Quick Reference Card
+---
+
+<nav>
+    <ol>
+        <li>
+            <a href="#type">Typography</a>
+        </li>
+        <li>
+            <a href="#links">Links</a>
+        </li>
+        <li>
+            <a href="#lists">Lists</a>
+        </li>
+        <li>
+            <a href="#table">Tables</a>
+        </li>
+        <li>
+            <a href="#form">Form</a>
+        </li>
+    </ol>
+</nav>
+
+<section id="type">
+    <h2>Typografie</h2>
+
+    <h3>Headers</h3>
+
+    <h4 class="alpha">Heading 1: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    <h4 class="beta">Heading 2: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    <h4 class="gamma">Heading 3: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    <h4 class="delta">Heading 4: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+
+    <h3>Headers with paragraphs</h3>
+
+    <h4 class="alpha">Heading 1: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    <p>Lorem Ipsum is <a href="#">simply dummy text</a> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <h4 class="beta">Heading 2: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    <p>Lorem Ipsum is <a href="#">simply dummy text</a> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <h4 class="gamma">Heading 3: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    <p>Lorem Ipsum is <a href="#">simply dummy text</a> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <h4 class="delta">Heading 4: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+
+    <h3>Paragraphs</h3>
+    <p>Lorem Ipsum is <a href="#">simply dummy text</a> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    <p class="small">Lorem Ipsum is <a href="#">simply dummy text</a> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+</section>
+
+<section id="links">
+
+    <h2>Links</h2>
+
+    <p>
+        <a href="#">Regular link</a>
+    </p>
+
+</section>
+
+<section id="lists">
+    <h2>Lists</h2>
+
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Unordered List</li>
+        <li>Unordered List</li>
+        <li>Unordered List</li>
+        <li>Unordered List</li>
+    </ul>
+
+    <h3>Unordered List With Links</h3>
+    <ul>
+        <li>
+            <a href="#">Unordered List</a>
+        </li>
+        <li>
+            <a href="#">Unordered List</a>
+        </li>
+        <li>
+            <a href="#">Unordered List</a>
+        </li>
+    </ul>
+
+    <h3>Ordered List</h3>
+    <ol>
+        <li>Ordered List</li>
+        <li>Ordered List</li>
+        <li>Ordered List</li>
+        <li>Ordered List</li>
+    </ol>
+
+    <h3>Definition List</h3>
+    <dl>
+        <dt>Definition Term</dt>
+        <dd>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</dd>
+        <dt>Definition Term</dt>
+        <dd>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</dd>
+    </dl>
+
+</section>
+
+<section id="table">
+
+    <h2>Tables</h2>
+
+    <table>
+        <thead>
+        <th scope="col">Column 1</th>
+        <th scope="col">Column 2</th>
+        <th scope="col">Column 3</th>
+        <th scope="col">Column 4</th>
+        </thead>
+        <tbody>
+        <tr>
+            <td scope="row">Column 1</td>
+            <td>Column 2</td>
+            <td>Column 3</td>
+            <td>Column 4</td>
+        </tr>
+        <tr>
+            <td scope="row">Column 1</td>
+            <td>Column 2</td>
+            <td>Column 3</td>
+            <td>Column 4</td>
+        </tr>
+        <tr>
+            <td scope="row">Column 1</td>
+            <td>Column 2</td>
+            <td>Column 3</td>
+            <td>Column 4</td>
+        </tr>
+        </tbody>
+    </table>
+
+</section>
+
+<section id="form">
+    <h2>Forms</h2>
+
+    <h3>Validation</h3>
+    <ol data-role="alert">
+        <li>
+            <label for="text3">Veld Lorem is verplicht.</label>
+        </li>
+    </ol>
+
+    <h3>Basic form</h3>
+    <form action="templates" method="post">
+        <fieldset>
+            <legend>Fieldset</legend>
+            <div class="form-item">
+                <label for="text">Text Input</label>
+                <input type="text" id="text" placeholder="Bijv. Lorem ipsum" />
+            </div>
+            <div class="form-item">
+                <label for="text2">Text Input</label>
+                <input type="text" id="text2" disabled="disabled" placeholder="Bijv. Lorem ipsum" />
+            </div>
+            <div class="form-item">
+                <label for="text3">Text Input</label>
+                <input type="text" id="text3" placeholder="Bijv. Lorem ipsum" aria-invalid="true" />
+            </div>
+            <div class="form-item">
+                <label for="text4">Text Input <span class="required-field">*</span></label>
+                <input type="text" id="text4" placeholder="Bijv. Lorem ipsum" />
+            </div>
+            <div class="form-item">
+                <label for="select">Select</label>
+                <select id="select" data-module="ui/Select">
+                    <optgroup label="Optgroup 1">
+                        <option>Lorem ipsum dolor sit amet consectuer lorem ipsum 1.</option>
+                        <option>Lorem ipsum dolor sit amet consectuer lorem ipsum 2.</option>
+                        <option>Lorem ipsum dolor sit amet consectuer lorem ipsum 3.</option>
+                    </optgroup>
+                    <optgroup label="Optgroup 2">
+                        <option>Lorem ipsum dolor sit amet consectuer lorem ipsum 1.</option>
+                        <option>Lorem ipsum dolor sit amet consectuer lorem ipsum 2.</option>
+                        <option>Lorem ipsum dolor sit amet consectuer lorem ipsum 3.</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div class="form-item">
+                <input type="checkbox" id="checkbox" />
+                <label for="checkbox">
+                    <span class="input-placeholder"></span>
+                    Checkbox
+                </label>
+            </div>
+            <div class="form-item">
+                <label for="textarea">Textarea</label>
+                <textarea id="textarea" rows="4" cols="20"></textarea>
+            </div>
+            <div class="form-item">
+                <label for="textarea-limit">Textarea capped</label>
+                <textarea id="textarea-limit" rows="4" cols="20" data-module="ui/Textarea" maxlength="300"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Radio Buttons</legend>
+            <ol>
+                <li>
+                    <input type="radio" name="radio" id="radio1" />
+                    <label for="radio1">
+                        <span class="input-placeholder"></span>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="radio" id="radio2" />
+                    <label for="radio2">
+                        <span class="input-placeholder"></span>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </label>
+                </li>
+                <li>
+                    <input type="radio" name="radio" id="radio3" />
+                    <label for="radio3">
+                        <span class="input-placeholder"></span>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </label>
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset>
+            <legend>Checkboxes</legend>
+            <ol>
+                <li>
+                    <input type="checkbox" id="checkbox1" />
+                    <label for="checkbox1">
+                        <span class="input-placeholder"></span>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="checkbox2" />
+                    <label for="checkbox2">
+                        <span class="input-placeholder"></span>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </label>
+                </li>
+                <li>
+                    <input type="checkbox" id="checkbox3" />
+                    <label for="checkbox3">
+                        <span class="input-placeholder"></span>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </label>
+                </li>
+            </ol>
+        </fieldset>
+    </form>
+
+</section>
