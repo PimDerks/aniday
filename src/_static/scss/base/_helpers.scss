@@ -1,0 +1,54 @@
+/* Box-size everything
+----------------------------------------------- */
+*,
+*:after,
+*:before {
+  box-sizing:border-box;
+}
+
+/* Screenreader class for visually hiding content.
+----------------------------------------------- */
+
+.screenreader {
+  border:0;
+  clip:rect(0 0 0 0);
+  height:1px;
+  margin:-1px;
+  overflow:hidden;
+  padding:0;
+  position:absolute;
+  width:1px;
+}
+
+/* Floats
+----------------------------------------------- */
+.fl {
+  float:left;
+}
+
+.fr {
+  float:right;
+}
+
+/* Class for clearing floats
+----------------------------------------------- */
+
+.group:before,
+.group:after {
+  content:" ";
+  display:table;
+}
+
+.group:after {
+  clear: both;
+}
+
+/* Generic classes for removing bottom and/or top margins
+----------------------------------------------- */
+.glued {
+  margin-top:0 !important;
+}
+
+.stacked {
+  margin-bottom:0 !important;
+}

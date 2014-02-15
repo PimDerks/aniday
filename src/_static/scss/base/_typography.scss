@@ -1,0 +1,167 @@
+/* Import fonts
+----------------------------------------------- */
+
+/* @font-face {
+  font-family: 'open_sansregular';
+  src: url('../assets/fonts/opensans-regular/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../assets/fonts/opensans-regular/OpenSans-Regular-webfont.woff') format('woff'),
+  url('../assets/fonts/opensans-regular/OpenSans-Regular-webfont.ttf') format('truetype'),
+  url('../assets/fonts/opensans-regular/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* Responsive baseline
+----------------------------------------------- */
+
+body {
+  font-size:87.5%; /* 14 */
+  line-height:1.5;
+}
+
+@include respond-min($breakpoint-m){
+  body {
+    font-size:100%; /* 16 */
+  }
+}
+
+@include respond-min($breakpoint-l){
+  body {
+    font-size:112.5%; /* 18 */
+  }
+}
+
+/* Add baseline class to the body for vertical rhythm
+----------------------------------------------- */
+
+.baseline {
+  background-image:linear-gradient(top, #D7D7D7 0%, #D7D7D7 50%, #F2F2F2 50%, #F2F2F2 100%);
+  background-size:100% 1.5em;
+  background-position:left top;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  ul,
+  ol,
+  dl,
+  label,
+  p {
+    background:rgba(255,0,0,.25);
+  }
+
+}
+
+/* Headings
+----------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h1 {
+  font-size:1em;
+  margin-bottom:1.5em;
+  margin-top:0;
+
+  a {
+    &:link,
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      text-decoration:none;
+    }
+  }
+
+}
+
+h1,
+.alpha {
+  font-size:2em; /* 36/18 */
+  font-weight:normal;
+  line-height:1.5em; /* 54/36 */
+  margin-bottom:.75em; /* 27/36 */
+}
+
+h2,
+h3,
+.beta,
+.gamma {
+  font-weight:normal;
+}
+
+h2,
+.beta {
+  font-size:1.333em; /* 24/18 */
+  line-height:1.6875em; /* 40.5/24 */
+  margin-bottom:1.125em; /* 27/24 */
+}
+
+h3,
+.gamma {
+  font-size:1em;
+  line-height:1.5em;
+  margin-bottom:1.5em;
+}
+
+h4,
+.delta {
+  font-size:.78888em; /* 14/18 */
+  line-height:1.9286em; /* 27/14 */
+  margin-bottom:1.9286em; /* 27/14 */
+}
+
+/* Paragraph
+----------------------------------------------- */
+
+p {
+  margin:0 0 1.5em;
+}
+
+.small {
+  font-size:.77778em; /* 14/18 */
+  line-height:1.9285714em; /* 27/14 */
+  margin-bottom:1.9285714em;
+}
+
+/* Links
+----------------------------------------------- */
+
+a {
+
+  &:link {
+    text-decoration:underline;
+  }
+
+  &:focus,
+  &:hover {
+    text-decoration:none;
+  }
+
+  &:visited {
+  }
+
+}
+
+/* Images
+----------------------------------------------- */
+
+img {
+  max-width:100%;
+  vertical-align:bottom;
+}
+
+.text-overflow:focus {
+  box-shadow:none;
+  outline-width:0;
+}
+
+/* Text selection
+----------------------------------------------- */
+
+::selection {
+}
