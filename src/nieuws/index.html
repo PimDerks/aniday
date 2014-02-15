@@ -23,7 +23,7 @@ title: Your New Jekyll Site
     {% if page == paginator.page %}
     <em>{{ page }}</em>
     {% elsif page == 1 %}
-    <a href="{{ '/news/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+    <a href="{{ '/nieuws/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
     {% else %}
     <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
     {% endif %}
