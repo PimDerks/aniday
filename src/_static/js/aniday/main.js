@@ -5,7 +5,8 @@ requirejs.config({
     baseUrl:'/_static/js/aniday',
     paths:{
         'conditioner':'../vendor/rikschennink/conditioner',
-        'conditioner/tests':'../vendor/rikschennink/tests'
+        'conditioner/tests':'../vendor/rikschennink/tests',
+        'audiojs':'../vendor/audiojs/audio.min'
     }
 });
 
