@@ -7,6 +7,8 @@ define(['conditioner','conditioner/Observer','audiojs','utils/Merge'],function(c
         this._element = element;
         this._options = options;
 
+        /*jshint multistr: true */
+
         // Options
         var defaultOptions = {
             css: false,
@@ -62,7 +64,7 @@ define(['conditioner','conditioner/Observer','audiojs','utils/Merge'],function(c
 
         _initialize: function () {
 
-            this._player = audiojs.create(this._element, this._options);
+            this._player = Audio.create(this._element, this._options);
 
         },
 
@@ -75,7 +77,6 @@ define(['conditioner','conditioner/Observer','audiojs','utils/Merge'],function(c
         },
 
         play: function(){
-            // pim.element.addClass(this._artwork,'playing');
         },
 
         playPause: function(){

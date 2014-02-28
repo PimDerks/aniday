@@ -202,7 +202,7 @@ define(['conditioner','conditioner/Observer','ui/AudioPlayer'],function(conditio
 
         _updateControls: function(){
             // hide/show prev
-            if(this._index == 0){
+            if(this._index === 0){
                 //pim.element.addClass(this._prevButton, 'disabled')
             } else {
                 //pim.element.removeClass(this._prevButton, 'disabled');
