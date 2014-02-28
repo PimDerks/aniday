@@ -1,0 +1,110 @@
+/* Scroller
+---------------------------------------------------------*/
+
+.scroller {
+  background:rgb(0,0,0);
+  overflow:hidden;
+  position:relative;
+}
+
+.scroller-wrapper {
+  position:relative;
+}
+
+.js .scroller-items {
+  cursor:move;
+  cursor:-moz-grab;
+  cursor:-webkit-grab;
+  overflow:hidden;
+  position:relative;
+}
+
+.js .dragging .scroller-items {
+  cursor:move;
+  cursor:-moz-grabbing;
+  cursor:-webkit-grabbing;
+}
+
+/* Scroller with JS
+---------------------------------------------------------*/
+
+.scroller-items {
+  list-style:none none outside;
+  left:0;
+  padding-left:0;
+  transform:translateX(0);
+  transform-style:preserve-3d; /* http://stackoverflow.com/questions/7764859/moz-transform-z-index-bug */
+  transition:all 300ms ease-out;
+
+  img {
+    margin-bottom:0;
+  }
+
+  > li {
+    display:inline-block;
+    vertical-align:bottom;
+  }
+
+  > li + li {
+    display:none;
+  }
+
+  &.scroller-items-initialized > li + li {
+    display:inline-block;
+  }
+
+}
+
+/* Scroller without JS
+---------------------------------------------------------*/
+.no-js {
+
+  .scroller-items {
+
+    > li + li {
+      display:inline-block;
+    }
+
+  }
+
+}
+
+/* Scroller paging
+---------------------------------------------------------*/
+.scroller-paging {
+  bottom:0;
+  left:0;
+  list-style:none none outside;
+  position:absolute;
+  text-align:center;
+  width:100%;
+  z-index:1;
+
+  > li {
+    display:inline-block;
+    margin-right:.5em;
+
+    button {
+      background:rgba(255,255,255,.5);
+      box-shadow:0 .1em 0 rgba(0,0,0,.25);
+      border-radius:50%;
+      border-width:0;
+      padding:.333em;
+
+      &:focus {
+        outline:none;
+      }
+
+    }
+
+  }
+
+  > li.active {
+
+    button {
+      background:rgba(255,255,255,1);
+    }
+
+  }
+
+}
