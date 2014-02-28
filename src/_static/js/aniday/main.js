@@ -47,7 +47,11 @@ if (!window._env){
     define(['aniday'],function(aniday) {
         aniday.init({
             'modules':{
-
+                'ui/Scroller':{
+                    'options':{
+                        'paging':true
+                    }
+                }
             }
         });
     });
