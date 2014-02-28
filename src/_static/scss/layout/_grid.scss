@@ -1,0 +1,40 @@
+.wrapper__inner {
+  padding-left:3em;
+  padding-right:3em;
+}
+
+.grid {
+  margin-left:-3em;
+
+  .grid__item {
+    display:inline-block;
+    padding-left:3em;
+    padding-top:3em;
+    vertical-align:top;
+    width:100%;
+  }
+
+}
+
+/* Matrix-list S
+---------------------------------------------------------*/
+@include respond-min($breakpoint-s){
+
+  .grid {
+
+    .grid__item--s-1of1 { width:100%; }
+    .grid__item--s-1of2 { width:50%; }
+    .grid__item--s-1of3 { width:33.33%; }
+    .grid__item--s-2of3 { width:66.66%; }
+    .grid__item--s-1of4 { width:25%; }
+    .grid__item--s-2of4 { width:50%; }
+    .grid__item--s-3of4 { width:75%; }
+    .grid__item--s-1of5 { width:20%; }
+    .grid__item--s-2of5 { width:40%; }
+    .grid__item--s-3of5 { width:50%; }
+    .grid__item--s-4of5 { width:60%; }
+    .grid__item--s-1of6 { width:16.6667%; }
+
+  }
+
+}
