@@ -1,0 +1,101 @@
+/* Events list
+---------------------------------------------------------*/
+
+.events {
+  position:relative;
+
+  > li {
+    text-align:center;
+  }
+
+  > li + li {
+    margin-top:1.5em;
+  }
+
+  &:after {
+    content:"";
+    border-left:1px dotted rgba(255,255,255,.25);
+    height:100%;
+    left:50%;
+    position:absolute;
+    top:0;
+  }
+
+}
+
+.vcalendar {
+  background:rgba(0,0,0,.5);
+  position:relative;
+  text-align:left;
+  width:100%;
+  z-index:1;
+
+  img {
+    height:4.5em;
+    margin-bottom:0;
+  }
+
+  .location__venue,
+  .location__city {
+    display:block;
+  }
+
+  .location__venue {
+    color:$color-primary;
+    font-weight:bold;
+  }
+
+}
+
+/* Slideshow
+---------------------------------------------------------*/
+.slideshow {
+
+  > li {
+    position:relative;
+
+    .hgroup {
+      left:3em;
+      position:absolute;
+      top:3em;
+    }
+
+    .hgroup--bottom {
+      bottom:4.5em;
+      top:auto;
+    }
+
+    .hgroup--right {
+      left:auto;
+      right:3em;
+    }
+
+  }
+
+}
+
+/* Item meta
+---------------------------------------------------------*/
+
+.item-meta {
+
+  dt {
+    color:$color-primary;
+    font-size:.75rem;
+    font-weight:bold;
+    line-height:1.5rem;
+  }
+
+  dt ~ dt {
+    margin-top:1.5em;
+  }
+
+  dd {
+    font-weight:normal;
+    margin-left:0;
+  }
+
+}
+
+/* Tracklist
+---------------------------------------------------------*/
