@@ -1,0 +1,98 @@
+.matrix-list {
+  list-style:none none outside;
+  padding:0;
+  position:relative;
+
+  img {
+    margin-bottom:0;
+  }
+
+  > li {
+    display:inline-block;
+    vertical-align:top;
+  }
+
+  &.matrix-list-border {
+    margin-left:-2px;
+    margin-top:-2px;
+    > li {
+      padding-left:2px;
+      padding-top:3px;
+    }
+  }
+
+  &.matrix-list-gutter {
+    margin-left:-1.5em;
+    margin-top:-1.5em;
+    > li {
+      padding-left:1.5em;
+      padding-top:1.5em;
+    }
+  }
+
+}
+
+/* Matrix-list
+---------------------------------------------------------*/
+.matrix-list {
+
+  .matrix-list-1 > li { width:100%; }
+  .matrix-list-2 > li { width:50%; }
+  .matrix-list-3 > li { width:33.33%; }
+  .matrix-list-4 > li { width:25%; }
+  .matrix-list-5 > li { width:20%; }
+  .matrix-list-6 > li { width:16.6667%; }
+
+}
+
+/* Matrix-list S
+---------------------------------------------------------*/
+@include respond-min($breakpoint-s){
+
+  .matrix-list-s-1 > li { width:100%; }
+  .matrix-list-s-2 > li { width:50%; }
+  .matrix-list-s-3 > li { width:33.33%; }
+  .matrix-list-s-4 > li { width:25%; }
+  .matrix-list-s-5 > li { width:20%; }
+  .matrix-list-s-6 > li { width:16.6667%; }
+
+}
+
+/* Matrix-list M
+---------------------------------------------------------*/
+@include respond-min($breakpoint-m){
+
+  .matrix-list-m-1 > li { width:100%; }
+  .matrix-list-m-2 > li { width:50%; }
+  .matrix-list-m-3 > li { width:33.33%; }
+  .matrix-list-m-4 > li { width:25%; }
+  .matrix-list-m-5 > li { width:20%; }
+  .matrix-list-m-6 > li { width:16.6667%; }
+
+}
+
+/* Matrix-list L
+---------------------------------------------------------*/
+@include respond-min($breakpoint-l){
+
+  .matrix-list-l-1 > li { width:100%; }
+  .matrix-list-l-2 > li { width:50%; }
+  .matrix-list-l-3 > li { width:33.33%; }
+  .matrix-list-l-4 > li { width:25%; }
+  .matrix-list-l-5 > li { width:20%; }
+  .matrix-list-l-6 > li { width:16.6667%; }
+
+}
+
+/* Matrix-list XL
+---------------------------------------------------------*/
+@include respond-min($breakpoint-xl){
+
+  .matrix-list-xl-1 > li { width:100%; }
+  .matrix-list-xl-2 > li { width:50%; }
+  .matrix-list-xl-3 > li { width:33.33%; }
+  .matrix-list-xl-4 > li { width:25%; }
+  .matrix-list-xl-5 > li { width:20%; }
+  .matrix-list-xl-6 > li { width:16.6667%; }
+
+}
