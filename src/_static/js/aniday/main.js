@@ -6,7 +6,9 @@ requirejs.config({
     paths:{
         'conditioner':'../vendor/rikschennink/conditioner',
         'conditioner/tests':'../vendor/rikschennink/tests',
-        'audiojs':'../vendor/audiojs/audio.min'
+        'audiojs':'../vendor/audiojs/audio.min',
+        'hammer':'../vendor/eightmedia/hammer',
+        'shadowbox':'../vendor/mjijackson/shadowbox'
     }
 });
 
