@@ -1,3 +1,4 @@
+
 {% include document/document-open.html %}
 
     {% include document/document-head.html %}
@@ -6,36 +7,65 @@
 
         {% include layout/header.html %}
 
-        <article>
-            <header>
-                <h1>{{ page.title }}</h1>
-                <dl>
-                    <dt>Gepubliceerd op</dt>
-                    <dd>
-                        {% include helpers/date.html date="{{ page.date }}" %}
-                    </dd>
-                    <dt>
-                        Auteur
-                    </dt>
-                    <dd>
-                        {{ page.author }}
-                    </dd>
-                </dl>
-            </header>
+        <div class="wrapper">
+            {% include layout/header.html %}
 
-            {% if page.img %}
-            <figure>
-                <img src="{{ site.path }}/_media/{{ page.img.url }}" alt="{{ page.img.alt }}" />
-                {% if page.img.caption %}
-                    <figcaption>{{ page.img.caption }}</figcaption>
-                {% endif %}
-            </figure>
-            {% endif %}
+            <main class="main-content">
 
-            {{ content }}
-        </article>
 
-        {% include layout/footer.html %}
+                <article>
+
+                    {% include components/scroller.html %}
+
+                    <header>
+                        <h1>{{ page.title }}</h1>
+                        <dl>
+                            <dt>Gepubliceerd op</dt>
+                            <dd>
+                                {% include helpers/date.html date="{{ page.date }}" %}
+                            </dd>
+                            <dt>
+                                Auteur
+                            </dt>
+                            <dd>
+                                {{ page.author }}
+                            </dd>
+                        </dl>
+                    </header>
+
+                    {% if page.img %}
+                    <figure>
+                        <img src="{{ site.path }}/{{ page.img.url }}" alt="{{ page.img.alt }}" />
+                        {% if page.img.caption %}
+                        <figcaption>{{ page.img.caption }}</figcaption>
+                        {% endif %}
+                    </figure>
+                    {% endif %}
+
+                    <div class="box box-inner box-white">
+                        {{ content }}
+                    </div>
+
+                </article>
+
+            </main><!--
+            --><div class="sidebar">
+
+            <div class="box box-inner box-secondary">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+
+            <div class="box box-inner box-primary">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+
+        </div>
+
+            {% include layout/footer.html %}
+
+        </div>
+
+
 
     </body>
 
