@@ -21,5 +21,34 @@ ol {
 /* Definition list
 ----------------------------------------------- */
 dl {
+  dt {
+    font-weight:bold;
+  }
+}
+
+/* Definition list
+----------------------------------------------- */
+.reset-list {
+  list-style:none none outside;
+  padding-left:0;
+}
+
+/* Block list
+ ----------------------------------------------- */
+
+.block-list {
+  > li {
+    padding:.75em 0;
+  }
+}
+
+/* Border-list
+----------------------------------------------- */
+.border-list {
+  border-top:1px solid rgb(96,96,96);
+
+  > li {
+    border-bottom:1px solid rgb(96,96,96);
+  }
 
 }
