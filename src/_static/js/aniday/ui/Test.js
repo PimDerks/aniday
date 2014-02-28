@@ -1,4 +1,4 @@
-define(['conditioner','conditioner/Observer'],function(conditioner, Observer){
+define([],function(){
 
     'use strict';
 
@@ -23,14 +23,12 @@ define(['conditioner','conditioner/Observer'],function(conditioner, Observer){
 
         _initialize: function () {
 
-            console.log('init');
-
         },
 
         /**
          * Clean up when unloading this module.
          *
-         * @memberof TEst
+         * @memberof Test
          * @static
          * @public
          */
