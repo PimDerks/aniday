@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: empty
 title: Quick Reference Card
 ---
 
@@ -65,6 +65,35 @@ title: Quick Reference Card
     <h4 class="gamma">Heading 3: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
     <h4 class="delta">Heading 4: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
 
+    <h3>Headers with subheading</h3>
+
+    <h4 class="alpha">Marlies Schuitemakers</h4>
+    <p class="beta subtitle">Lead- en backing-vocals</p>
+
+    <header class="content-header">
+        <h4 class="alpha">Marlies Schuitemakers</h4>
+        <p class="beta subtitle">Lead- en backing-vocals</p>
+    </header>
+
+    <h4 class="alpha">Robby <span class="highlight">Valentine</span></h4>
+
+    <h4 class="alpha">Robby <span class="highlight highlight--break">Valentine</span></h4>
+
+    <h4 class="alpha"><span class="highlight highlight--break">Robby</span>Valentine</h4>
+
+
+    <h4 class="alpha">Heading 1: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    <p class="beta subtitle">Subtitle</p>
+
+    <h4 class="beta">Heading 2: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    <p class="gamma subtitle">Subtitle</p>
+
+    <h4 class="gamma">Heading 3: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    <p class="delta subtitle">Subtitle</p>
+
+    <h4 class="delta">Heading 4: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
+    <p class="delta subtitle">Subtitle</p>
+
     <h3>Headers with paragraphs</h3>
 
     <h4 class="alpha">Heading 1: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h4>
@@ -129,6 +158,142 @@ title: Quick Reference Card
         <dt>Definition Term</dt>
         <dd>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</dd>
     </dl>
+
+    <ul class="matrix-list matrix-list-s-2 matrix-list-m-3 matrix-list-l-4">
+        {% for x in (1..4) %}<li>
+            <a href="#" class="hover-box">
+                <img src="{{ site.path }}/_media/img/gallery/{{ x }}.jpg" alt="" />
+                <span class="icon icon-plus"></span>
+            </a>
+        </li>{% endfor %}
+    </ul>
+
+    <ul class="matrix-list matrix-list-border matrix-list-s-2 matrix-list-m-3 matrix-list-l-4">
+        {% for x in (1..4) %}<li>
+        <a href="#" class="hover-box">
+            <img src="{{ site.path }}/_media/img/gallery/{{ x }}.jpg" alt="" />
+            <span class="icon icon-plus"></span>
+        </a>
+    </li>{% endfor %}
+    </ul>
+
+    <ul class="matrix-list matrix-list-gutter matrix-list-s-2 matrix-list-m-3 matrix-list-l-4">
+        {% for x in (1..4) %}<li>
+        <a href="#" class="hover-box">
+            <img src="{{ site.path }}/_media/img/gallery/{{ x }}.jpg" alt="" />
+            <span class="icon icon-plus"></span>
+        </a>
+        <div class="box box-inner box-black">
+            <h3>
+                <a href="#">Marlies Schuitemakers</a>
+            </h3>
+            <p class="subtitle delta">Lead- en backingvocals</p>
+            <!-- <a href="#" class="button">Lees meer...</a> -->
+        </div>
+    </li>{% endfor %}
+    </ul>
+
+    <ul class="matrix-list matrix-list-gutter matrix-list-s-2 matrix-list-m-3 matrix-list-l-4">
+        {% for x in (1..5) %}<li>
+        <a href="#" class="hover-box">
+            <img src="{{ site.path }}/_media/img/discog/{{ x }}.jpg" alt="" />
+            <span class="icon icon-plus"></span>
+        </a>
+        <div class="box box-inner box-black">
+            <h3>
+                <a href="#">Delectrified</a>
+            </h3>
+            <p class="subtitle delta">2007</p>
+            <!-- <a href="#" class="button">Lees meer...</a> -->
+        </div>
+    </li>{% endfor %}
+    </ul>
+
+    <div class="grid">
+        <div class="grid__item grid__item--s-3of4">
+            <ul class="matrix-list matrix-list-gutter matrix-list-s-2 matrix-list-m-3">
+                {% for x in (1..5) %}<li>
+                <a href="#" class="hover-box">
+                    <img src="{{ site.path }}/_media/img/discog/{{ x }}.jpg" alt="" />
+                    <span class="icon icon-plus"></span>
+                </a>
+                <div class="box box-inner box-black">
+                    <h3>
+                        <a href="#">Delectrified</a>
+                    </h3>
+                    <p class="subtitle delta">2007</p>
+                    <!-- <a href="#" class="button">Lees meer...</a> -->
+                </div>
+            </li>{% endfor %}
+            </ul>
+        </div><div class="grid__item grid__item--s-1of4">
+            <h3>Lorem ipsum</h3>
+            <p>Lorem ipsum dolor sit amet consectuer.</p>
+        </div>
+    </div>
+
+    <h2 id="meta" class="gamma">Profiel</h2>
+    <p class="subtitle delta">Marlies Schuitemaker</p>
+    <dl class="item-meta">
+        <dt>Titel</dt>
+        <dd>Born To Die</dd>
+        <dt>Datum</dt>
+        <dd>29 maart 2014</dd>
+        <dt>Label</dt>
+        <dd>Marlies Music Productions</dd>
+        <dt>Duur</dt>
+        <dd>51:49</dd>
+    </dl>
+    <h2 id="events">Events</h2>
+    <ol class="reset-list events">
+        {% assign var = 2014 %}
+        {% for x in (1..5) %}
+        <li>
+            <h3>
+                <span class="highlight">Optredens</span> {{ var | minus: x }}
+            </h3>
+            <table class="vcalendar">
+                <thead class="screenreader">
+                    <tr>
+                        <th scope="col">Datum</th>
+                        <th scope="col">Poster</th>
+                        <th scope="col">Locatie</th>
+                        <th scope="col">Informatie</th>
+                        <th scope="col">URL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for y in (1..5) %}
+                    <tr>
+                        <td scope="row">
+                            <time class="dtstart" datetime="2014-03-02">02/03</time>
+                        </td>
+                        <td>
+                            <img src="http://www.dummyimage.com/80x80" alt="" />
+                        </td>
+                        <td>
+                            <span class="location">
+                                <span class="location__venue">P3</span>
+                                <span class="location__city">Purmerend, Noord Holland</span>
+                            </span>
+                        </td>
+                        <td>
+                            <a href="#">
+                                <span class="icon icon-zoom-in"></span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="#" class="button">
+                                Meer info
+                            </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </li>
+        {% endfor %}
+    </ol>
 
 </section>
 

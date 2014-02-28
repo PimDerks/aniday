@@ -1,0 +1,42 @@
+.hover-box {
+  display:block;
+  overflow:hidden;
+  position:relative;
+
+  img {
+    opacity:1;
+    transform:scale(1);
+    transition:all 250ms ease-out;
+    -webkit-backface-visibility: hidden; /* prevent flicker */
+  }
+
+  .icon {
+    background:rgba(0,0,0,.75);
+    border-radius:50%;
+    color:$color-white;
+    font-size:2em;
+    left:50%;
+    margin-left:-1.5em;
+    margin-top:-1.5em;
+    padding:.75em;
+    position:absolute;
+    transform:translateY(250%) rotate(45deg);
+    transition:transform 250ms ease-out;
+    top:50%;
+  }
+
+  &:focus,
+  &:hover {
+
+    img {
+      opacity:.8;
+      transform:scale(1.05);
+    }
+
+    .icon {
+      transform:translateY(0%) rotate(0deg);
+    }
+
+  }
+
+}
