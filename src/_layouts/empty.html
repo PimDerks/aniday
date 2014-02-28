@@ -1,0 +1,102 @@
+{% include document/document-open.html %}
+
+    {% include document/document-head.html %}
+
+    <body>
+
+        <a id="toggle" href="#" style="position:fixed; top:3em; right:0; background:white; padding:.75em;">toggle baseline</a>
+        <script>
+            var link = document.getElementById('toggle');
+            link.addEventListener('click',function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                if(document.body.classList.contains('baseline')){
+                    document.body.classList.remove('baseline');
+                } else {
+                    document.body.classList.add('baseline');
+                }
+            });
+        </script>
+
+        <div class="wrapper">
+
+            {% include components/scroller-alt.html %}
+
+            <div class="wrapper__inner box-black">
+
+                {{ content }}
+
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="wrapper__inner box-inner box-primary">
+
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <ul class="matrix-list matrix-list-s-2 matrix-list-m-3 matrix-list-l-4">
+                {% for x in (1..4) %}<li>
+                <a href="#" class="hover-box">
+                    <img src="{{ site.path }}/_media/img/gallery/{{ x }}.jpg" alt="" />
+                    <span class="icon icon-plus"></span>
+                </a>
+            </li>{% endfor %}
+            </ul>
+
+            <ul class="matrix-list matrix-list-border matrix-list-s-2 matrix-list-m-3 matrix-list-l-4">
+                {% for x in (1..4) %}<li>
+                <a href="#" class="hover-box">
+                    <img src="{{ site.path }}/_media/img/gallery/{{ x }}.jpg" alt="" />
+                    <span class="icon icon-plus"></span>
+                </a>
+            </li>{% endfor %}
+            </ul>
+
+            <ul class="matrix-list matrix-list-gutter matrix-list-s-2 matrix-list-m-3 matrix-list-l-4">
+                {% for x in (1..4) %}<li>
+                <a href="#" class="hover-box">
+                    <img src="{{ site.path }}/_media/img/gallery/{{ x }}.jpg" alt="" />
+                    <span class="icon icon-plus"></span>
+                </a>
+                <div class="box box-inner box-black">
+                    <h3>
+                        <a href="#">Marlies Schuitemakers</a>
+                    </h3>
+                    <p class="subtitle delta">Lead- en backingvocals</p>
+                    <!-- <a href="#" class="button">Lees meer...</a> -->
+                </div>
+            </li>{% endfor %}
+            </ul>
+
+            <ul class="matrix-list matrix-list-gutter matrix-list-s-2 matrix-list-m-3 matrix-list-l-4">
+                {% for x in (1..5) %}<li>
+                <a href="#" class="hover-box">
+                    <img src="{{ site.path }}/_media/img/discog/{{ x }}.jpg" alt="" />
+                    <span class="icon icon-plus"></span>
+                </a>
+                <div class="box box-inner box-black">
+                    <h3>
+                        <a href="#">Delectrified</a>
+                    </h3>
+                    <p class="subtitle delta">2007</p>
+                    <!-- <a href="#" class="button">Lees meer...</a> -->
+                </div>
+            </li>{% endfor %}
+            </ul>
+        </div>
+
+        <div class="wrapper">
+            <div class="wrapper__inner box-inner box-black">
+                {% include layout/footer.html %}
+            </div>
+        </div>
+
+    </body>
+
+    {% include document/document-scripts.html %}
+
+{% include document/document-close.html %}

@@ -1,0 +1,81 @@
+{% include document/document-open.html %}
+
+{% include document/document-head.html %}
+
+<body>
+
+<div class="wrapper">
+    {% include layout/header.html %}
+
+    <main class="main-content">
+        <article>
+
+            {% include components/scroller.html %}
+
+            <div class="box box-inner box-white">
+
+                <header>
+                    <h1>{{ page.title }}</h1>
+                </header>
+
+                {% if page.img %}
+                    <figure>
+                        <img src="{{ site.path }}/{{ page.img.url }}" alt="{{ page.img.alt }}" />
+                        {% if page.img.caption %}
+                            <figcaption>{{ page.img.caption }}</figcaption>
+                        {% endif %}
+                    </figure>
+                {% endif %}
+
+                <a href="{{ site.path }}/_media/img/2014-02-15.jpg" rel="shadowbox[aniday]">
+                    <img src="http://www.dummyimage.com/100x100" alt="" />
+                </a>
+
+                <a href="{{ site.path }}/_media/img/2014-02-15.jpg" rel="shadowbox[aniday]">
+                    <img src="http://www.dummyimage.com/100x100" alt="" />
+                </a>
+
+                <section class="profile">
+                    <h2>Profiel</h2>
+                    <dl>
+                        <dt>Naam</dt>
+                        <dd>Marlies Schuitemaker</dd>
+                        <dt>Geboortedatum</dt>
+                        <dd>31 maart 1981</dd>
+                        <dt>Invloeden</dt>
+                        <dd>Anouk, Pink, Christina Aguilera</dd>
+                        <dt>Favoriete Aniday-nummer</dt>
+                        <dd>"Lost The Way", lorem ipsum dolor sit amet consectuer.</dd>
+                        <dt>Beste Aniday-herinnering</dt>
+                        <dd>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</dd>
+                    </dl>
+                </section>
+
+                {{ content }}
+
+                </div>
+            </article>
+
+    </main><!--
+            --><div class="sidebar">
+
+    <div class="box box-inner box-secondary">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+
+    <div class="box box-inner box-primary">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+
+</div>
+</div>
+
+        {% include layout/footer.html %}
+
+    </div>
+
+</body>
+
+{% include document/document-scripts.html %}
+
+{% include document/document-close.html %}
