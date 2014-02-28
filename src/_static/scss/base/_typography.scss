@@ -85,11 +85,15 @@ h1,
 h2,
 h3,
 h4,
-h5 {
-  font-family:$font-arial;
+h5,
+.subtitle {
+  color:$color-white;
+  font-family:$font-open-sans;
   font-size:1em;
-  margin-bottom:1.5em;
+  font-weight:bold;
+  margin-bottom:.75rem;
   margin-top:0;
+  position:relative;
 
   a {
     &:link,
@@ -101,42 +105,68 @@ h5 {
     }
   }
 
+  &.header-section {
+    margin-bottom:1.5rem;
+    position:relative;
+  }
+
+  &.header-section--alt {
+    padding-bottom:1.5rem;
+
+    &:after {
+      border-bottom:.25em solid $color-primary;
+      bottom:0;
+      content:"";
+      display:block;
+      left:0;
+      position:absolute;
+      width:1.5rem;
+    }
+
+  }
+
+}
+
+.highlight,
+.subtitle {
+  color:$color-white;
+}
+
+.highlight--break {
+  display:block;
+}
+
+.subtitle {
+  margin-top:-.75rem;
+
+  &.subtitle--glued {
+    margin-top:0;
+  }
+
 }
 
 h1,
 .alpha {
   font-size:2em; /* 36/18 */
-  font-weight:normal;
   line-height:1.5em; /* 54/36 */
-  margin-bottom:.75em; /* 27/36 */
-}
-
-h2,
-h3,
-.beta,
-.gamma {
-  font-weight:normal;
 }
 
 h2,
 .beta {
   font-size:1.333em; /* 24/18 */
   line-height:1.6875em; /* 40.5/24 */
-  margin-bottom:1.125em; /* 27/24 */
 }
 
 h3,
 .gamma {
   font-size:1em;
   line-height:1.5em;
-  margin-bottom:1.5em;
 }
 
 h4,
 .delta {
   font-size:.78888em; /* 14/18 */
   line-height:1.9286em; /* 27/14 */
-  margin-bottom:1.9286em; /* 27/14 */
 }
 
 /* Paragraph
@@ -218,3 +248,14 @@ img {
   max-width:100%;
   vertical-align:bottom;
 }
+
+/* Content header
+----------------------------------------------- */
+.content-header {
+  border-bottom:1px solid rgba(255,255,255,.25);
+  margin-bottom:3em;
+  padding:3em 0;
+}
+
+.primary { color:$color-primary; }
+.secondary { color:$color-secondary; }
