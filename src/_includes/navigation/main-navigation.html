@@ -1,25 +1,28 @@
-<nav role="navigation">
+<nav role="navigation" data-module="ui/MainNav" data-conditions="window:{max-width:599}">
     <h2 class="screenreader">Hoofdnavigatie</h2>
-    <ul>
-        <li>
+    <ul class="main-navigation" id="main-navigation">
+        <li{% if page.group == 'home' %} class="current"{% endif %}>
+            <a href="/">Home</a>
+        </li>
+        <li{% if page.group == 'nieuws' %} class="current"{% endif %}>
             <a href="#">Nieuws</a>
         </li>
-        <li>
+        <li{% if page.group == 'agenda' %} class="current"{% endif %}>
             <a href="#">Agenda</a>
         </li>
-        <li>
-            <a href="#">Band</a>
+        <li{% if page.group == 'band' %} class="current"{% endif %}>
+            <a href="/band/">Band</a>
         </li>
-        <li>
+        <li{% if page.group == 'muziek' %} class="current"{% endif %}>
             <a href="#">Muziek</a>
         </li>
-        <li>
+        <li{% if page.group == 'media' %} class="current"{% endif %}>
             <a href="#">Media</a>
         </li>
-        <li>
+        <li{% if page.group == 'shop' %} class="current"{% endif %}>
             <a href="#">Shop</a>
         </li>
-        <li>
+        <li{% if page.group == 'contact' %} class="current"{% endif %}>
             <a href="#">Contact</a>
         </li>
     </ul>
