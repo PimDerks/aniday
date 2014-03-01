@@ -1,0 +1,125 @@
+.audiojs {
+  cursor:pointer;
+  overflow:hidden;
+  padding:.75rem;
+  position:relative;
+
+  button {
+    background:transparent;
+    border-width:0;
+    color:rgb(170,170,170);
+
+    &:focus {
+      outline:none;
+    }
+
+  }
+
+  .audiojs__play-pause__loading,
+  .audiojs__play-pause__error,
+  .audiojs__error-message {
+    display:none;
+  }
+
+  .audiojs__title,
+  .audiojs__time {
+    display:inline-block;
+  }
+
+  .audiojs__play-pause {
+    left:.25rem;
+    position:absolute;
+  }
+
+  .audiojs__title {
+    padding-left:2.5em; /* create room for play button */
+    width:75%;
+  }
+
+  .audiojs__time {
+    color:rgb(96,96,96);
+    width:25%;
+  }
+
+  .audiojs__scrubber {
+    background:#131313;
+    display:none;
+    margin-top:.75rem;
+    padding:.75rem;
+    position:relative;
+
+    .audiojs__scrubber__progress,
+    .audiojs__scrubber__loaded {
+      background:$color-primary;
+      display:block;
+      height:.75rem;
+      width:0;
+    }
+
+    .audiojs__scrubber__inner {
+      position:relative;
+    }
+
+    .audiojs__scrubber__progress {
+      left:0;
+      position:absolute;
+      top:0;
+    }
+
+    .audiojs__scrubber__loaded {
+      background:#222222;
+    }
+
+  }
+
+  .audiojs__play-pause__play,
+  .audiojs__play-pause__pause {
+    background:rgb(0,0,0);
+    border-radius:50%;
+    color:rgb(96,96,96);
+    font-size:.5em;
+    padding:.75em;
+    position:relative;
+
+    &:focus,
+    &:hover {
+      color:$color-white;
+    }
+
+  }
+
+  .audiojs__play-pause__play {
+    display:block;
+  }
+
+  .audiojs__play-pause__pause {
+    display:none;
+  }
+
+  &.audiojs--playing {
+
+    .audiojs__title {
+      color:$color-white;
+    }
+
+    .audiojs__play-pause__play {
+      display:none;
+    }
+
+    .audiojs__play-pause__pause,
+    .audiojs__play-pause__play {
+      color:$color-white;
+    }
+
+    .audiojs__scrubber,
+    .audiojs__play-pause__pause {
+      display:block;
+    }
+
+  }
+
+  + a {
+    display:none;
+  }
+
+}

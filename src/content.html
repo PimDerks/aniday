@@ -4,6 +4,41 @@ title: Quick Reference Card
 ---
 
 
+<div class="grid">
+    <div class="grid__item grid__item--s-1of2">
+
+        <h2 class="header-section">Playlist</h2>
+        <ol class="reset-list border-list">
+            <li>
+                <a href="{{ site.path }}/_media/audio/saveme-edit.mp3" data-module="ui/AudioPlayer">Everything</a>
+            </li>
+            <li>
+                <a href="{{ site.path }}/_media/audio/saveme-edit.mp3" data-module="ui/AudioPlayer">Not Much Of A Man</a>
+            </li>
+            <li>
+                <a href="{{ site.path }}/_media/audio/saveme-edit.mp3" data-module="ui/AudioPlayer">Leave Me With Your Lies</a>
+            </li>
+        </ol>
+
+    </div><!--
+        --><div class="grid__item grid__item--s-1of2">
+
+    <h2 class="header-section header-section--alt">Playlist</h2>
+
+    <audio id="audio-player" preload></audio>
+
+    <ol data-module="ui/AudioPlaylist" data-audio-player="audio-player" class="playlist reset-list border-list">
+        <li>
+            <a href="{{ site.path }}/_media/audio/saveme-edit.mp3">Everything</a>
+        </li>
+        <li>
+            <a href="{{ site.path }}/_media/audio/saveme-edit.mp3">Everything</a>
+        </li>
+    </ol>
+
+</div>
+</div>
+
 <header class="test group">
     <div class="hgroup">
         <h1>
@@ -27,10 +62,10 @@ title: Quick Reference Card
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 <h3 class="header-section">Tracklist</h3>
                 <ol class="tracklist border-list reset-list block-list">
-                    <li>Everything <span class="icon icon-play"></span> <span class="icon icon-pause"></span></li>
-                    <li>Dream On  <span class="icon icon-play"></span> <span class="icon icon-pause"></span></li>
-                    <li>Not Much Of A Man <span class="icon icon-play"></span> <span class="icon icon-pause"></span></li>
-                    <li>Stop Reading <span class="icon icon-play"></span> <span class="icon icon-pause"></span></li>
+                    <li>Everything</li>
+                    <li>Dream On</li>
+                    <li>Not Much Of A Man</li>
+                    <li>Stop Reading</li>
                 </ol>
         </div>
     </div>
