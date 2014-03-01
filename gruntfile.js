@@ -276,10 +276,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-jekyll');
 
     // 'private' css build set
-    grunt.registerTask('_css',['sass','csslint','autoprefixer','cssmin']);
+    // grunt.registerTask('_css',['sass','csslint','autoprefixer','cssmin']);
+    grunt.registerTask('_css',['sass','autoprefixer']);
 
     // 'private' js build set
-    grunt.registerTask('_js',['jshint','uglify:all','requirejs','uglify:shim']);
+    // grunt.registerTask('_js',['jshint','uglify:all','requirejs','uglify:shim']);
+    grunt.registerTask('_js',['requirejs']);
 
     // 'private' html build set
     grunt.registerTask('_html',['jekyll','clean:static','copy:static','copy:media']);
