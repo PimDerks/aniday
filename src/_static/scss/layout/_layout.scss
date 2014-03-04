@@ -20,8 +20,18 @@ body {
 
 @include respond-min($breakpoint-m){
 
+  body {
+    padding-top:9em;
+  }
+
   .page-header {
-    background:rgba(0,0,0,1);
+    background:rgba(0,0,0,.85);
+    border-bottom:.25em solid $color-primary;
+    box-shadow:0 .25em .25em rgba(0,0,0,.15);
+    left:0;
+    position:fixed;
+    top:0;
+    z-index:1000;
 
     .page-logo {
       float:left;

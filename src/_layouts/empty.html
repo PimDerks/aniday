@@ -18,9 +18,23 @@
             });
         </script>
 
-        <div class="wrapper">
+        <header class="page-header">
 
-            {% include components/scroller-alt.html %}
+            <div class="wrapper group">
+                <h1 class="screenreader">Aniday</h1>
+                <div class="page-logo">
+                    <a href="{{ site.path }}">
+                        <img src="{{ site.path }}/_static/assets/svg/logo.svg" alt="Aniday" class="logo" />
+                    </a>
+                </div>
+                <div class="page-nav">
+                    {% include navigation/main-navigation.html %}
+                </div>
+            </div>
+
+        </header>
+
+        <div class="wrapper">
 
             <div class="wrapper__inner box-black">
 
