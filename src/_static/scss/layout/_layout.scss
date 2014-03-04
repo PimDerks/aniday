@@ -54,6 +54,16 @@ body {
   position:relative;
 }
 
+@include respond-min($breakpoint-l){
+
+  .wrapper {
+    margin-left:5%;
+    margin-right:5%;
+    max-width:none;
+  }
+
+}
+
 .main-content {
   background:white;
   color:black;
