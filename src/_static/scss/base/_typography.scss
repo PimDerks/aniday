@@ -120,7 +120,7 @@ h5,
       display:block;
       left:0;
       position:absolute;
-      width:1.5rem;
+      width:3rem;
     }
 
   }
@@ -180,6 +180,14 @@ p {
   font-size:.77778em; /* 14/18 */
   line-height:1.9285714em; /* 27/14 */
   margin-bottom:1.9285714em;
+}
+
+.lead {
+  color:$color-white;
+  font-weight:bold;
+  /* font-size:1.125em; */ /* 18/16 */
+  /* line-height:1.7778em; */ /* 32/18 */
+  /* margin-bottom:1.7778em; */ /* 32/18 */
 }
 
 /* Links
