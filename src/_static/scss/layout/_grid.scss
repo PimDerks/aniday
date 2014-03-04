@@ -8,8 +8,6 @@
 
   .grid__item {
     display:inline-block;
-    padding-left:3em;
-    padding-top:3em;
     vertical-align:top;
     width:100%;
   }
@@ -34,6 +32,75 @@
     .grid__item--s-3of5 { width:50%; }
     .grid__item--s-4of5 { width:60%; }
     .grid__item--s-1of6 { width:16.6667%; }
+
+  }
+
+}
+
+/* Matrix-list M
+---------------------------------------------------------*/
+@include respond-min($breakpoint-m){
+
+  .grid {
+
+    .grid__item--m-1of1 { width:100%; }
+    .grid__item--m-1of2 { width:50%; }
+    .grid__item--m-1of3 { width:33.33%; }
+    .grid__item--m-2of3 { width:66.66%; }
+    .grid__item--m-1of4 { width:25%; }
+    .grid__item--m-2of4 { width:50%; }
+    .grid__item--m-3of4 { width:75%; }
+    .grid__item--m-1of5 { width:20%; }
+    .grid__item--m-2of5 { width:40%; }
+    .grid__item--m-3of5 { width:50%; }
+    .grid__item--m-4of5 { width:60%; }
+    .grid__item--m-1of6 { width:16.6667%; }
+
+  }
+
+}
+
+/* Matrix-list L
+---------------------------------------------------------*/
+@include respond-min($breakpoint-l){
+
+  .grid {
+
+    .grid__item--l-1of1 { width:100%; }
+    .grid__item--l-1of2 { width:50%; }
+    .grid__item--l-1of3 { width:33.33%; }
+    .grid__item--l-2of3 { width:66.66%; }
+    .grid__item--l-1of4 { width:25%; }
+    .grid__item--l-2of4 { width:50%; }
+    .grid__item--l-3of4 { width:75%; }
+    .grid__item--l-1of5 { width:20%; }
+    .grid__item--l-2of5 { width:40%; }
+    .grid__item--l-3of5 { width:50%; }
+    .grid__item--l-4of5 { width:60%; }
+    .grid__item--l-1of6 { width:16.6667%; }
+
+  }
+
+}
+
+/* Matrix-list XL
+---------------------------------------------------------*/
+@include respond-min($breakpoint-xl){
+
+  .grid {
+
+    .grid__item--xl-1of1 { width:100%; }
+    .grid__item--xl-1of2 { width:50%; }
+    .grid__item--xl-1of3 { width:33.33%; }
+    .grid__item--xl-2of3 { width:66.66%; }
+    .grid__item--xl-1of4 { width:25%; }
+    .grid__item--xl-2of4 { width:50%; }
+    .grid__item--xl-3of4 { width:75%; }
+    .grid__item--xl-1of5 { width:20%; }
+    .grid__item--xl-2of5 { width:40%; }
+    .grid__item--xl-3of5 { width:50%; }
+    .grid__item--xl-4of5 { width:60%; }
+    .grid__item--xl-1of6 { width:16.6667%; }
 
   }
 
