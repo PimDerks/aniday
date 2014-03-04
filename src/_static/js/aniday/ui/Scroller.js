@@ -90,7 +90,6 @@ define(['module','conditioner/Observer','utils/Element','utils/Event','utils/Res
             // Add class
             this._element.classList.add('scroller-items-initialized');
 
-
         },
 
         /**
@@ -653,6 +652,9 @@ define(['module','conditioner/Observer','utils/Element','utils/Event','utils/Res
             if (this._itemsVisible < 1) {
                 this._itemsVisible = 1;
             }
+
+            // add class
+            this._element.classList.add('scroller-items-initialized');
 
 
         },
