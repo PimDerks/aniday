@@ -1,10 +1,16 @@
-<header class="detail-header group">
+<header class="detail-header group"
+    {% if include.cover %}
+        style="background-image:url('{{ include.cover }}');"
+    {% endif %}
+>
     <div class="hgroup">
         <h1>
-            Marlies Schuitemaker
+            {{ include.title }}
         </h1>
-        <p class="subtitle subtitle--glued beta">
-            Lead- en backingvocals
-        </p>
+        {% if include.subtitle %}
+            <p class="subtitle subtitle--glued beta">
+                {{ include.subtitle }}
+            </p>
+        {% endif %}
     </div>
 </header>
