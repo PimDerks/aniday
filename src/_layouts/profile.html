@@ -6,26 +6,24 @@
 
             {% include layout/header.html %}
 
-            <article class="box-inner box-inner--xl">
+            <article>
 
                 <div class="wrapper">
                     {% include components/header.html %}
                 </div>
 
                 <div class="wrapper box box-black">
-                    <div class="wrapper__inner">
+                    <div class="wrapper__inner wrapper__inner--tb">
 
                         <div class="grid">
-                            <div class="grid__item grid__item--s-1of1 grid__item--m-2of3">
+                            <div class="grid__item grid__item--gutter grid__item--s-1of1 grid__item--m-2of3">
 
-                                <div class="box box-inner box-inner--xl">
-                                    {{ content }}
-                                </div>
+                                {{ content }}
 
                             </div><!--
-                            --><div class="grid__item grid__item--s-1of1 grid__item--m-1of3">
+                            --><div class="grid__item grid__item--gutter grid__item--s-1of1 grid__item--m-1of3">
 
-                                <div class="box box-inner box-inner--xl">
+                                <div class="box landmark">
                                     <h2 class="header-section header-section--alt">Profiel</h2>
                                     <dl class="item-meta">
                                         <dt>Naam</dt>
@@ -42,21 +40,65 @@
 
                                 </div>
 
+                                <div class="box box-primary box-inner">
+                                    <h2>Links</h2>
+                                    <p>Lorem ipsum dolor sit amet.</p>
+                                    <ul>
+                                        <li>
+                                            <a href="#">Twitter</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Facebook</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Blog</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
                             </div>
                         </div>
+
+                        <hr />
+
+                        <section class="box">
+                            <h2 class="header-section header-section--alt">Foto's</h2>
+                            <p>Lorem ipsum dolor sit amet.</p>
+
+                            <ul class="matrix-list matrix-list-gutter matrix-list-s-2 matrix-list-m-4">
+                                {% for x in (1..4) %}<li>
+                                <a href="#" class="overlay-box">
+                                    <figure>
+                                        <img src="{{ site.path }}/_media/img/gallery/{{ x }}.jpg" alt="" class="stacked" />
+                                        <figcaption class="overlay-box__title">
+                                            <h3 class="stacked">
+                                                Robby Valentine
+                                            </h3>
+                                            <p class="delta primary stacked">Guitar</p>
+                                        </figcaption>
+
+                                    </figure>
+                                </a>
+                                </li>{% endfor %}
+                            </ul>
+
+                            <p>
+                               <a href="#" class="button">Meer foto's</a>
+                            </p>
+                        </section>
 
                     </div>
                 </div>
 
                 <aside class="wrapper box box-primary">
-                    <div class="box box-inner--xl">
+                    <div class="box box-inner--xl screenreader">
                         <h2 class="stacked">Overige bandleden van Aniday</h2>
                     </div>
                     <ul class="matrix-list matrix-list-s-2 matrix-list-m-4 stacked">
                         {% for x in (1..4) %}<li>
                         <a href="#" class="overlay-box">
                             <figure>
-                                <img src="{{ site.path }}/_media/img/gallery/{{ x }}.jpg" alt="" />
+                                <img src="{{ site.path }}/_media/img/gallery/{{ x }}.jpg" alt="" class="stacked" />
                                 <figcaption class="overlay-box__title">
                                     <h3 class="stacked">
                                         Robby Valentine

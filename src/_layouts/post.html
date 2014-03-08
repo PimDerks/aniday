@@ -1,25 +1,25 @@
-
 {% include document/document-open.html %}
 
-    {% include document/document-head.html %}
+{% include document/document-head.html %}
 
-    <body>
+<body>
 
-        {% include layout/header.html %}
+{% include layout/header.html %}
 
-        <div class="wrapper">
-            {% include layout/header.html %}
+<article class="box-inner box-inner--xl">
 
-            <main class="main-content">
+    <div class="wrapper">
+        {% include components/header.html %}
+    </div>
 
+    <div class="wrapper box box-black">
 
-                <article>
+            <div class="grid">
+                <div class="grid__item grid__item--s-1of1 grid__item--m-1of3">
+                    <div class="box box-inner box-inner--xl">
 
-                    {% include components/scroller.html %}
-
-                    <header>
-                        <h1>{{ page.title }}</h1>
-                        <dl>
+                        <h2>Over dit artikel</h2>
+                        <dl class="item-meta">
                             <dt>Gepubliceerd op</dt>
                             <dd>
                                 {% include helpers/date.html date="{{ page.date }}" %}
@@ -30,45 +30,54 @@
                             <dd>
                                 {{ page.author }}
                             </dd>
+                            <dt>
+                                Categorie
+                            </dt>
+                            <dd>
+                                Live
+                            </dd>
                         </dl>
-                    </header>
 
-                    {% if page.img %}
-                    <figure>
-                        <img src="{{ site.path }}/{{ page.img.url }}" alt="{{ page.img.alt }}" />
-                        {% if page.img.caption %}
-                        <figcaption>{{ page.img.caption }}</figcaption>
-                        {% endif %}
-                    </figure>
-                    {% endif %}
+                    </div>
+                </div><!--
+                --><div class="grid__item grid__item--s-1of1 grid__item--m-2of3">
 
-                    <div class="box box-inner box-white">
-                        {{ content }}
+                    <div class="box box-inner box-inner--xl">
+
+
+
+
+                            {% if page.img %}
+                            <figure class="box box-primary island">
+                                <img src="{{ site.path }}/{{ page.img.url }}" alt="{{ page.img.alt }}" class="stacked" />
+                                <figcaption class="box box-inner">
+                                    Image caption.
+                                </figcaption>
+                            </figure>
+                            {% endif %}
+
+
+                                {{ content }}
+
+
+                        </article>
+
                     </div>
 
-                </article>
+                </div><!--
+                            --><div class="grid__item grid__item--s-1of1 grid__item--m-1of3">
 
-            </main><!--
-            --><div class="sidebar">
-
-            <div class="box box-inner box-secondary">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
             </div>
 
-            <div class="box box-inner box-primary">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </div>
+    </div>
 
-        </div>
+</article>
 
-            {% include layout/footer.html %}
+{% include layout/footer.html %}
 
-        </div>
+</body>
 
-
-
-    </body>
-
-    {% include document/document-scripts.html %}
+{% include document/document-scripts.html %}
 
 {% include document/document-close.html %}
