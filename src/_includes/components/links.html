@@ -1,0 +1,13 @@
+<div class="box box-primary box-inner">
+    <h2>{{ include.title }}</h2>
+    {% if include.text %}
+        <p>{{ include.text }}</p>
+    {% endif %}
+    <ul class="reset-list link-list border-list border-list--inv">
+        {% for link in include.data %}
+        <li>
+            <a href="{{ link.url }}">{{ link.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
