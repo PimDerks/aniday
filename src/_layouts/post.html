@@ -9,7 +9,7 @@
 <article class="box-inner box-inner--xl">
 
     <div class="wrapper">
-        {% include components/header.html %}
+        {% include components/header.html title=page.title subtitle=page.subtitle cover=page.cover %}
     </div>
 
     <div class="wrapper box box-black">
@@ -18,34 +18,15 @@
                 <div class="grid__item grid__item--s-1of1 grid__item--m-1of3">
                     <div class="box box-inner box-inner--xl">
 
-                        <h2>Over dit artikel</h2>
-                        <dl class="item-meta">
-                            <dt>Gepubliceerd op</dt>
-                            <dd>
-                                {% include helpers/date.html date="{{ page.date }}" %}
-                            </dd>
-                            <dt>
-                                Auteur
-                            </dt>
-                            <dd>
-                                {{ page.author }}
-                            </dd>
-                            <dt>
-                                Categorie
-                            </dt>
-                            <dd>
-                                Live
-                            </dd>
-                        </dl>
+                        <section class="landmark" id="about">
+                            {% include components/item-meta.html data=page.meta title="Over dit bericht" %}
+                        </section>
 
                     </div>
                 </div><!--
                 --><div class="grid__item grid__item--s-1of1 grid__item--m-2of3">
 
                     <div class="box box-inner box-inner--xl">
-
-
-
 
                             {% if page.img %}
                             <figure class="box box-primary island">
@@ -56,11 +37,7 @@
                             </figure>
                             {% endif %}
 
-
-                                {{ content }}
-
-
-                        </article>
+                            {{ content }}
 
                     </div>
 
