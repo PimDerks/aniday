@@ -13,40 +13,34 @@
     </div>
 
     <div class="wrapper box box-black">
+        <div class="wrapper__inner wrapper__inner--tb">
 
             <div class="grid">
-                <div class="grid__item grid__item--s-1of1 grid__item--m-1of3">
-                    <div class="box box-inner box-inner--xl">
+                <div class="grid__item grid__item--gutter grid__item--s-1of1 grid__item--m-1of3">
 
-                        <section class="landmark" id="about">
-                            {% include components/item-meta.html data=page.meta title="Over dit bericht" %}
+                    <section class="landmark" id="about">
+                        {% include components/item-meta.html data=page.meta title="Over dit artikel" %}
+                    </section>
+
+                </div><!--
+                --><div class="grid__item grid__item--gutter grid__item--s-1of1 grid__item--m-2of3">
+
+                    {% if page.scroller %}
+                        <section class="landmark" id="pix">
+                            <h2 class="header-section header-section--alt">Foto's bij dit artikel</h2>
+                            {% include components/scroller.html data=page.scroller overlay=true %}
                         </section>
+                    {% endif %}
 
-                    </div>
-                </div><!--
-                --><div class="grid__item grid__item--s-1of1 grid__item--m-2of3">
+                    <section class="landmark" id="article">
+                        <h2 class="header-section header-section--alt">Artikel</h2>
+                        {{ content }}
+                    </section>
 
-                    <div class="box box-inner box-inner--xl">
-
-                            {% if page.img %}
-                            <figure class="box box-primary island">
-                                <img src="{{ page.img.url }}" alt="{{ page.img.alt }}" class="stacked" />
-                                <figcaption class="box box-inner">
-                                    Image caption.
-                                </figcaption>
-                            </figure>
-                            {% endif %}
-
-                            {{ content }}
-
-                    </div>
-
-                </div><!--
-                            --><div class="grid__item grid__item--s-1of1 grid__item--m-1of3">
-
-            </div>
+                </div>
             </div>
 
+        </div>
     </div>
 
 </article>
