@@ -1,9 +1,11 @@
 $grid-gutter:4em;
 
 .wrapper {
+  left:0;
   margin-left:auto;
   margin-right:auto;
   max-width:1024px;
+  right:0;
 }
 
 .wrapper__inner {
@@ -21,20 +23,6 @@ $grid-gutter:4em;
 
 .wrapper__inner--b {
   padding-bottom:$grid-gutter;
-}
-
-.wrapper-helper {
-  background:blue;
-  display:none;
-  height:10px;
-  left:0;
-  margin:0 auto;
-  max-width:1024px;
-  position:fixed;
-  right:0;
-  top:0;
-  z-index:1100;
-  width:100%;
 }
 
 .grid {
@@ -61,23 +49,6 @@ $grid-gutter:4em;
 .wrapper__inner > .grid {
   margin-left:-$grid-gutter/2;
   margin-right:-$grid-gutter/2;
-}
-
-.showgrid {
-
-  .wrapper {
-    border-left:2px solid blue;
-    border-right:2px solid blue;
-  }
-
-  .grid__item > div {
-    background:red;
-  }
-
-  .wrapper-helper {
-    display:block;
-  }
-
 }
 
 .grid--valign {

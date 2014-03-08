@@ -40,6 +40,7 @@ body {
     border-bottom:.25em solid $color-primary;
     box-shadow:0 .25em .25em rgba(0,0,0,.15);
     left:0;
+    margin:0 auto;
     position:fixed;
     top:0;
     width:100%;
@@ -66,37 +67,6 @@ body {
 
 }
 
-.main-content {
-  background:white;
-  color:black;
-}
-
-.sidebar {
-}
-
-@include respond-min($breakpoint-l){
-
-  .main-content,
-  .sidebar {
-    display:inline-block;
-    vertical-align:top;
-  }
-
-  .main-content {
-    margin-right:1.5%;
-    width:65.1666%;
-  }
-
-  .sidebar {
-    margin-left:1.5%;
-    width:31.8333%;
-  }
-
-  .test + .wrapper .sidebar {
-    margin-top:-7.5em;
-  }
-
-}
 
 .box {
   position:relative;
