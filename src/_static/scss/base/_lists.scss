@@ -42,6 +42,26 @@ dl {
   }
 }
 
+/* Link list
+ ----------------------------------------------- */
+
+.link-list {
+
+  a {
+    display:block;
+    padding:.75em 0;
+    text-decoration:none;
+
+    &:focus,
+    &:hover {
+
+    }
+
+  }
+
+}
+
+
 /* Border-list
 ----------------------------------------------- */
 .border-list {
@@ -54,6 +74,15 @@ dl {
 
   > li {
     border-bottom:1px solid rgb(96,96,96);
+  }
+
+  &.border-list--inv {
+    border-top-color:$color-white;
+
+    & > li {
+      border-bottom-color:$color-white;
+    }
+
   }
 
 }

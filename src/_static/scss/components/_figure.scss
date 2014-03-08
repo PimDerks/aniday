@@ -1,4 +1,4 @@
-.figure {
+/* .figure {
   position:relative;
 }
 
@@ -10,7 +10,7 @@
   img {
     transform:scale(1);
     transition:all 250ms ease-out;
-    -webkit-backface-visibility: hidden; /* prevent flicker */
+    -webkit-backface-visibility: hidden;
   }
 
   .overlay-box__title {
@@ -33,6 +33,31 @@
 
     img {
       transform:scale(1.05);
+    }
+
+  }
+
+} */
+
+.fig-caption {
+  background:$color-primary;
+  position:relative;
+
+  img {
+    margin-bottom:0;
+  }
+
+  .fig-caption__caption {
+    background:$color-primary;
+    color:$color-white;
+    padding:.75em;
+
+    &.fig-caption__caption--overlay {
+      bottom:0;
+      left:0;
+      position:absolute;
+      width:100%;
+      z-index:1;
     }
 
   }
