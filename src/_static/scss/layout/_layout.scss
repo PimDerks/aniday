@@ -5,6 +5,7 @@ html {
 body {
   background:transparent url("../assets/img/bg1.jpg") no-repeat top right;
   background-size:100% auto;
+  background-attachment:fixed;
 }
 
 .page-content {
@@ -18,10 +19,20 @@ body {
 
 }
 
+
+.landmark {
+  margin-bottom:3em;
+}
+
 @include respond-min($breakpoint-m){
 
   body {
     padding-top:9em;
+
+    &.body--stuck {
+      padding-top:0;
+    }
+
   }
 
   .page-header {
@@ -31,6 +42,7 @@ body {
     left:0;
     position:fixed;
     top:0;
+    width:100%;
     z-index:1000;
 
     .page-logo {
@@ -50,26 +62,6 @@ body {
       padding:7.5em 0;
     }
 
-  }
-
-}
-
-/* .page-content {
-  background:black;
-} */
-
-.wrapper {
-  margin:0 auto;
-  max-width:1024px;
-  position:relative;
-}
-
-@include respond-min($breakpoint-l){
-
-  .wrapper {
-    margin-left:5%;
-    margin-right:5%;
-    max-width:none;
   }
 
 }
@@ -108,10 +100,6 @@ body {
 
 .box {
   position:relative;
-}
-
-.box-inner {
-  padding:1.5em;
 
   > *:last-child,
   > *:last-child > *:last-child,
@@ -119,6 +107,10 @@ body {
     margin-bottom:0;
   }
 
+}
+
+.box-inner {
+  padding:1.5em;
 }
 
 .box-inner--xl {
@@ -137,7 +129,12 @@ body {
 
 .box-primary {
   background:rgba($color-primary,.85);
-  color:$color-white;
+
+  &,
+  & a {
+    color:$color-white;
+  }
+
 }
 
 .box-secondary {
@@ -171,125 +168,10 @@ nav[role]{
 ----------------------------------------------- */
 
 .page-footer {
-  padding:3em 0;
-  text-align:center;
+  margin-top:3em;
 
   p {
     margin-bottom:0;
-  }
-
-}
-
-
-/* Img header
------------------------------------------------ */
-.img-header {
-  position:relative;
-
-  .img-header-title {
-    @if $old-ie {
-      background:$color-primary;
-    } @else {
-      background:rgba($color-primary, .9);
-    }
-    bottom:0;
-    left:0;
-    padding:1.5em 3em;
-    position:absolute;
-    z-index:1;
-  }
-
-  img {
-    margin-bottom:0;
-  }
-
-  h2,
-  h3 {
-    margin-bottom:0;
-
-  }
-
-}
-
-
-/* Teaser site
------------------------------------------------ */
-
-.teaser {
-  padding-bottom:4.5em;
-
-  .teaser-wrapper {
-    margin:0 auto;
-    max-width:40em;
-  }
-
-  .landmark {
-    margin-bottom:3em;
-  }
-
-  .page-header {
-    padding:3em 0 1.5em;
-  }
-
-  .page-footer {
-    padding:1.5em 0 3em;
-  }
-
-  .msg {
-    @if $old-ie {
-      background:black;
-    } @else {
-      background:rgba(0,0,0,.75);
-    }
-    bottom:0;
-    left:0;
-    color:$color-white;
-    padding:1.5em;
-    position:fixed;
-    text-align:center;
-    width:100%;
-    z-index:1000;
-
-    p {
-      margin-bottom:0;
-    }
-  }
-
-}
-
-/* Teaser Navigation (bigger screens)
----------------------------------------------------------*/
-
-.teaser-navigation {
-  list-style:none none outside;
-  padding-left:0;
-  position:relative;
-  text-align:center;
-  width:100%;
-
-  > li {
-    display:inline-block;
-
-    a {
-      color:rgb(255,255,255);
-      display:block;
-      padding:.75em 1.5em;
-      text-decoration:none;
-      transition:all 250ms ease-out;
-
-      &:focus,
-      &:hover,
-      &:active {
-        background-color:rgba(0,0,0,.5);
-        color:$color-primary;
-      }
-
-      &:active {
-        background-color:rgba(0,0,0,.75);
-      }
-
-    }
-
   }
 
 }
