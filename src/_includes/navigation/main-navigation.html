@@ -2,25 +2,25 @@
     <h2 class="screenreader">Hoofdnavigatie</h2>
     <ul class="main-navigation" id="main-navigation">
         <li{% if page.group == 'nieuws' %} class="current"{% endif %}>
-            <a href="#">Nieuws</a>
+            <a href="{{ site.path }}/nieuws/">Nieuws</a>
         </li>
         <li{% if page.group == 'agenda' %} class="current"{% endif %}>
-            <a href="#">Agenda</a>
+            <a href="{{ site.path }}/agenda/">Agenda</a>
         </li>
         <li{% if page.group == 'band' %} class="current"{% endif %}>
-            <a href="/band/">Band</a>
+            <a href="{{ site.path }}/band/">Band</a>
         </li>
         <li{% if page.group == 'muziek' %} class="current"{% endif %}>
-            <a href="#">Muziek</a>
+            <a href="{{ site.path }}/muziek/">Muziek</a>
         </li>
         <li{% if page.group == 'media' %} class="current"{% endif %}>
-            <a href="#">Media</a>
+            <a href="{{ site.path }}/media/">Media</a>
         </li>
         <li{% if page.group == 'shop' %} class="current"{% endif %}>
-            <a href="#">Shop</a>
+            <a href="{{ site.path }}/shop/">Shop</a>
         </li>
         <li{% if page.group == 'contact' %} class="current"{% endif %}>
-            <a href="#">Contact</a>
+            <a href="{{ site.path }}/contact/">Contact</a>
         </li>
     </ul>
 </nav>
