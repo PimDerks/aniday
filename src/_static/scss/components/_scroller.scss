@@ -2,6 +2,10 @@
 ---------------------------------------------------------*/
 
 .scroller {
+  position:relative;
+}
+
+.scroller-items-wrapper {
   background:rgb(0,0,0);
   overflow:hidden;
   position:relative;
@@ -31,6 +35,7 @@
 .scroller-items {
   list-style:none none outside;
   left:0;
+  margin-bottom:0;
   padding-left:0;
   transform:translateX(0);
   transform-style:preserve-3d; /* http://stackoverflow.com/questions/7764859/moz-transform-z-index-bug */
@@ -60,6 +65,7 @@
 
 /* Scroller without JS
 ---------------------------------------------------------*/
+
 .no-js {
 
   .scroller-items {
@@ -74,8 +80,9 @@
 
 /* Scroller paging
 ---------------------------------------------------------*/
+
 .scroller-paging {
-  bottom:0;
+  bottom:4.5em;
   left:0;
   list-style:none none outside;
   position:absolute;

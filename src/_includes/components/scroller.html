@@ -1,19 +1,14 @@
-<ul data-module="ui/Scroller" class="scroller-items stacked">
-    <li>
-        <figure class="box box-primary">
-            <img src="{{ site.path }}/_media/img/band.jpg" alt="Aniday" />
-            <figcaption class="box-inner">Aniday 2009</figcaption>
-        </figure>
-    </li><!--
-    --><li>
-        <figure class="box box-primary">
-            <img src="{{ site.path }}/_media/img/band.jpg" alt="Aniday" />
-            <figcaption class="box-inner">Aniday 2009</figcaption>
-        </figure>
-    </li><!-- --><li>
-        <figure class="box box-primary">
-            <img src="{{ site.path }}/_media/img/band.jpg" alt="Aniday" />
-            <figcaption class="box-inner">Aniday 2009</figcaption>
-        </figure>
-    </li>
-</ul>
+<div class="box island scroller">
+    <ul data-module="ui/Scroller" class="scroller-items">
+        {% for pic in include.data %}<li>
+            <figure class="fig-caption">
+                <img src="{{ pic.url }}" alt="{{ pic.caption }}" />
+                {% if pic.caption %}
+                    <figcaption class="fig-caption__caption fig-caption__caption--overlay">
+                        {{ pic.caption }}
+                    </figcaption>
+                {% endif %}
+            </figure>
+        </li>{% endfor %}
+    </ul>
+</div>

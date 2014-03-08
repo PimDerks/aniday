@@ -27,7 +27,7 @@ define(['module','conditioner/Observer','utils/Element','utils/Event','utils/Res
 
             // wrap
             this._scroller = document.createElement('div');
-            this._scroller.className = 'scroller';
+            this._scroller.className = 'scroller-items-wrapper';
 
             // wrapper
             this._wrapper = document.createElement('div');
