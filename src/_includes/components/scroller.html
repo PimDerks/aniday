@@ -1,14 +1,33 @@
 <div class="box island scroller">
+
+    {% if include.data.size > 1 %}
+
     <ul data-module="ui/Scroller" class="scroller-items">
         {% for pic in include.data %}<li>
             <figure class="fig-caption">
                 <img src="{{ pic.url }}" alt="{{ pic.caption }}" />
                 {% if pic.caption %}
-                    <figcaption class="fig-caption__caption fig-caption__caption--overlay">
-                        {{ pic.caption }}
-                    </figcaption>
+                <figcaption class="fig-caption__caption{% if include.overlay %} fig-caption__caption--overlay{% endif %}">
+                    {{ pic.caption }}
+                </figcaption>
                 {% endif %}
             </figure>
         </li>{% endfor %}
     </ul>
+
+    {% else %}
+
+        {% for pic in include.data %}
+            <figure class="fig-caption">
+                <img src="{{ pic.url }}" alt="{{ pic.caption }}" />
+                {% if pic.caption %}
+                <figcaption class="fig-caption__caption">
+                    {{ pic.caption }}
+                </figcaption>
+                {% endif %}
+            </figure>
+        {% endfor %}
+
+    {% endif %}
+
 </div>

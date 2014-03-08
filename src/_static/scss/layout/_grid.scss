@@ -115,6 +115,10 @@ $grid-gutter:4em;
 
   .grid {
 
+    .grid__item {
+      margin-bottom:0;
+    }
+
     .grid__item--s-1of1 { width:100%; margin-bottom:3em; &:last-child { margin-bottom:0 }}
     .grid__item--s-1of2 { width:50%; }
     .grid__item--s-1of3 { width:33.33%; }
@@ -136,6 +140,10 @@ $grid-gutter:4em;
 @include respond-min($breakpoint-m){
 
   .grid {
+
+    .grid__item {
+      margin-bottom:0;
+    }
 
     .grid__item--m-1of1 { width:100%; margin-bottom:3em; &:last-child { margin-bottom:0 }}
     .grid__item--m-1of2 { width:50%; }
@@ -159,6 +167,10 @@ $grid-gutter:4em;
 
   .grid {
 
+    .grid__item {
+      margin-bottom:0;
+    }
+
     .grid__item--l-1of1 { width:100%; margin-bottom:3em; &:last-child { margin-bottom:0 }}
     .grid__item--l-1of2 { width:50%; }
     .grid__item--l-1of3 { width:33.33%; }
@@ -180,6 +192,10 @@ $grid-gutter:4em;
 @include respond-min($breakpoint-xl){
 
   .grid {
+
+    .grid__item {
+      margin-bottom:0;
+    }
 
     .grid__item--xl-1of1 { width:100%; margin-bottom:3em; &:last-child { margin-bottom:0 }}
     .grid__item--xl-1of2 { width:50%; }

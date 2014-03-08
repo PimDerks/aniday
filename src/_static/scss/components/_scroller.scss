@@ -12,6 +12,7 @@
 }
 
 .scroller-wrapper {
+  background:rgb(96,96,96);
   position:relative;
 }
 
@@ -82,7 +83,6 @@
 ---------------------------------------------------------*/
 
 .scroller-paging {
-  bottom:4.5em;
   left:0;
   list-style:none none outside;
   position:absolute;

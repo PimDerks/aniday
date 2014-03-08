@@ -1,90 +1,112 @@
 {% include document/document-open.html %}
 
-    {% include document/document-head.html %}
+{% include document/document-head.html %}
 
-    <body>
+<body>
 
-        {% include layout/header.html %}        
+{% include layout/header.html %}
 
-        <article>
-            <header>
-                <h1>{{ page.title }}</h1>
-            </header>
+<article>
 
-            <section id="release-meta">
-                <dl>
-                    <dt>Datum</dt>
-                    <dd>29 maart 2014</dd>
-                    <dt>Label</dt>
-                    <dd>Valentine Music Productions</dd>
-                    <dt>Opgenomen</dt>
-                    <dd>2009-2014</dd>
-                </dl>
-            </section>
+    <div class="wrapper">
+        {% include components/header.html title=page.title subtitle=page.subtitle cover=page.cover %}
+    </div>
 
-            <audio id="audio-player" preload></audio>
+    <div class="wrapper box box-black">
+        <div class="wrapper__inner wrapper__inner--tb">
 
-            <ol data-module="ui/AudioPlaylist" data-audio-player="audio-player" class="playlist reset-list">
-                <li>
-                    <a href="{{ site.path }}/_media/audio/saveme-edit.mp3" class="song-title">The Magic Breeze</a>
-                    <span class="song-duration">3:14</span>
-                    <span class="song-progress"></span>
-                </li>
-                <li>
-                    <a href="{{ site.path }}/_media/audio/ras.mp3" class="song-title">Broken Dreams</a>
-                    <span class="song-duration">3:14</span>
-                    <span class="song-progress"></span>
-                </li>
-            </ol>
+            <div class="grid">
+                <div class="grid__item grid__item--gutter grid__item--s-1of1 grid__item--m-1of2">
+
+                    <section class="landmark" id="artwork">
+                        <h2 class="header-section header-section--alt">Artwork</h2>
+                        {% if page.scroller %}
+                            {% include components/scroller.html data=page.scroller %}
+                        {% endif %}
+                    </section>
 
 
-            <section id="release-tracklist">
-                <ol>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">Lost The Way</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">Leave Me With Your Lies</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">When Loving You Is Wrong</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">Hole In My Heart</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">Born Yesterday</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">Buscanda La Vida</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">Don't Fool With Me</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">Can't Take No More</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">Dream On</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">Not Much Of A Man</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">We Belong (Gift Of Song)</a>
-                    </li>
-                    <li>
-                        <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">Get Funky</a>
-                    </li>
-                </ol>
-            </section>
+                    <section class="landmark" id="playlist">
+                        <h2 class="header-section header-section--alt">Playlist</h2>
+                        <audio id="audio-player" preload></audio>
 
-        </article>
+                        <ol data-module="ui/AudioPlaylist" data-audio-player="audio-player" class="playlist reset-list border-list">
+                            {% for x in (1..5) %}
+                            <li>
+                                <a href="{{ site.path }}/_media/audio/saveme-edit.mp3">The Magic Breeze</a>
+                            </li>
+                            {% endfor %}
+                        </ol>
+                    </section>
 
-        {% include layout/footer.html %}
+                </div><!--
+                            --><div class="grid__item grid__item--gutter grid__item--s-1of1 grid__item--m-1of2">
 
-    </body>
+                <section id="release-tracklist">
+                    <h2 class="header-section header-section--alt">Tracklist</h2>
+                    <ol class="reset-list block-list border-list">
+                        {% for x in (1..12) %}
+                        <li>
+                            <a href="{{ site.path }}/{% include helpers/permalink.html id='not-much-of-a-man' %}">Lost The Way</a>
+                        </li>
+                        {% endfor %}
+                    </ol>
+                </section>
 
-    {% include document/document-scripts.html %}
+            </div>
+            </div>
+
+            <hr />
+
+            <div class="grid">
+                <div class="grid__item grid__item--gutter grid__item--s-1of1 grid__item--m-2of3">
+
+                    <section class="landmark" id="info">
+                        <h2 class="header-section header-section--alt">Informatie</h2>
+                        {{ content }}
+                    </section>
+
+                </div><!--
+                --><div class="grid__item grid__item--gutter grid__item--s-1of1 grid__item--m-1of3">
+
+                <section class="landmark" id="profile">
+                    {% include components/item-meta.html data=page.meta title="Over deze release" %}
+                </section>
+
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="grid">
+                <div class="grid__item grid__item--gutter grid__item--1of1 grid__item--s-1of1 grid__item--m-2of3">
+
+                    <section class="landmark" id="info">
+                        <h2 class="header-section header-section--alt">Reviews</h2>
+                        {{ content }}
+                    </section>
+
+
+                </div><!--
+                --><div class="grid__item grid__item--gutter grid__item--1of1 grid__item--s-1of2 grid__item--m-1of3">
+
+                    <section class="landmark" id="credits">
+                        {% include components/item-meta.html data=page.credits title="Credits" %}
+                    </section>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</article>
+
+{% include layout/footer.html %}
+
+</body>
+
+{% include document/document-scripts.html %}
 
 {% include document/document-close.html %}
+
