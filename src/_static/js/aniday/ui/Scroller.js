@@ -102,7 +102,7 @@ define(['module','conditioner/Observer','utils/Element','utils/Event','utils/Res
 
         enable:function(){
 
-            this._hammer.on('dragstart dragleft dragright release swipeleft swiperight', this._handleHammerBind);
+            this._hammer.on('dragleft dragright release swipeleft swiperight', this._handleHammerBind);
 
         },
 
@@ -116,7 +116,7 @@ define(['module','conditioner/Observer','utils/Element','utils/Event','utils/Res
 
         disable:function(){
 
-            this._hammer.off('dragstart dragleft dragright release swipeleft swiperight', this._handleHammerBind);
+            this._hammer.off('dragleft dragright release swipeleft swiperight', this._handleHammerBind);
 
         },
 
@@ -130,6 +130,9 @@ define(['module','conditioner/Observer','utils/Element','utils/Event','utils/Res
          */
 
         _handleHammer: function(e){
+
+            // remove class
+            this._element.classList.remove('scroller-items--animated');
 
             // disable browser scrolling
             if(
@@ -203,27 +206,6 @@ define(['module','conditioner/Observer','utils/Element','utils/Event','utils/Res
         },
 
         /**
-         * Set index from offset.
-         *
-         * @memberof Scroller
-         * @param {Number} Offset.
-         * @static
-         * @private
-         */
-
-        _setIndexFromOffset: function (offset) {
-
-            var index = Math.floor(parseFloat(offset.toString().replace('-', ''), 10) / this._itemWidth);
-
-            // Set index
-            this._index = index;
-
-            // Update
-            this._update();
-
-        },
-
-        /**
          * Start autoplay.
          *
          * @memberof Scroller
@@ -236,22 +218,6 @@ define(['module','conditioner/Observer','utils/Element','utils/Event','utils/Res
             this._autoplayTimer = setInterval(function () {
                 _this.navigate('next');
             }, this._options.auto);
-        },
-
-        /**
-         * On drag start.
-         *
-         * @memberof Scroller
-         * @static
-         * @private
-         */
-
-        _onDragStart: function () {
-
-            if(Modernizr.csstransitions){
-                this._wrapper.classList.add('dragging');
-            }
-
         },
 
         /**
@@ -373,7 +339,13 @@ define(['module','conditioner/Observer','utils/Element','utils/Event','utils/Res
 
         _setIndex: function (index) {
 
-            index = this._capIndex(index);
+            // reset delta
+            this._delta = null;
+
+            // add class
+            this._element.classList.add('scroller-items--animated');
+
+            index = this._cap(index);
 
             var offset;
 
@@ -485,7 +457,7 @@ define(['module','conditioner/Observer','utils/Element','utils/Event','utils/Res
          * @private
          */
 
-        _capIndex: function (index) {
+        _cap: function (index) {
 
             if (this._options.loop) {
 
@@ -676,11 +648,8 @@ define(['module','conditioner/Observer','utils/Element','utils/Event','utils/Res
 
             // unsubscribe
             Observer.unsubscribe(this._responsiveWindow, 'resize', this._onResizeBind);
-            this._element.removeEventListener('touchstart', this._onTouchStartBind);
             this._element.removeEventListener('mouseover', this._onMouseEnterBind);
             this._element.removeEventListener('mouseout', this._onMouseLeaveBind);
-            this._element.removeEventListener('mousedown', this._onMouseDownBind);
-            this._element.removeEventListener('mouseup', this._onMouseUpBind);
             window.removeEventListener('keydown', this._onKeyDownBind);
 
 
