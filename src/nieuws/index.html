@@ -1,36 +1,58 @@
 ---
-layout: default
-title: Your New Jekyll Site
+layout: news
+title: Nieuws
+subtitle: De laatste ontwikkelingen
+cover: "http://www.dummyimage.com/1000x1000"
+id: nieuws
 ---
 
-{% for post in paginator.posts %}
-<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-<p class="author">
-    <span class="date">{{ post.date }}</span>
-</p>
-<div class="content">
-    {{ post.content }}
-</div>
-{% endfor %}
+<ul class="matrix-list matrix-list-gutter matrix-list-s-1 matrix-list-m-2">
+    {% for post in paginator.posts %}<li>
+    <a href="{{ post.url }}" class="hover-box">
+        <img src="{{ post.img.url }}" alt="" class="stacked" />
+        <span class="icon icon-plus"></span>
+    </a>
+    <div class="box box-inner box-primary">
+        <h3>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+        </h3>
+        <p class="subtitle delta">{{ post.subtitle }}</p>
+        <a href="{{ post.url }}" class="button">Lees meer...</a>
+    </div></li>{% endfor %}
+</ul>
 
 {% if paginator.total_pages > 1 %}
-<div class="pagination">
-    {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' }}">&laquo; Prev</a>
-    {% endif %}
 
-    {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-    <em>{{ page }}</em>
-    {% elsif page == 1 %}
-    <a href="{{ '/nieuws/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-    {% else %}
-    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-    {% endfor %}
+    <ol class="reset-list pagination">
 
-    {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% endif %}
-</div>
+        {% if paginator.previous_page %}
+            <li class="pagination__prev">
+                <a class="button button--prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' | replace: 'index.html', '' }}">
+                    Vorige pagina
+                </a>
+            </li>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+            <li>
+                {% if page == paginator.page %}
+                    <strong>{{ page }}</strong>
+                {% elsif page == 1 %}
+                    <a href="{{ '/nieuws/' | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+                {% else %}
+                    <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+
+        {% if paginator.next_page %}
+        <li class="pagination__next">
+            <a class="button" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">
+                Volgende pagina
+            </a>
+        </li>
+        {% endif %}
+
+    </ol>
+
 {% endif %}

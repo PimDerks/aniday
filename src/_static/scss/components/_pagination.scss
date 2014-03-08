@@ -1,0 +1,25 @@
+.pagination {
+  position:relative;
+  text-align:center;
+
+  > li {
+    display:inline;
+    margin:0 .5em;
+  }
+
+  > .pagination__next,
+  > .pagination__prev {
+    right:0;
+    position:absolute;
+  }
+
+  > .pagination__prev {
+    left:0;
+    right:auto;
+  }
+
+  a {
+    text-decoration:none;
+  }
+
+}

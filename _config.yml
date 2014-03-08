@@ -2,5 +2,5 @@ source: ./src
 relative_permalinks: false
 permalink: /nieuws/:title
 include: ['_static']
-paginate: 5
-paginate_path: /nieuws/page-:num
+paginate: 6
+paginate_path: /nieuws/pagina-:num
