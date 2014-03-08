@@ -1,0 +1,11 @@
+<div class="box">
+    <h2 class="header-section header-section--alt">
+        {{ include.title }}
+    </h2>
+    <dl class="item-meta">
+        {% for item in include.data %}
+            <dt>{{ item.key }}</dt>
+            <dd>{{ item.value }}</dd>
+        {% endfor %}
+    </dl>
+</div>
