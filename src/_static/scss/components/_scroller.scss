@@ -34,7 +34,10 @@
   padding-left:0;
   transform:translateX(0);
   transform-style:preserve-3d; /* http://stackoverflow.com/questions/7764859/moz-transform-z-index-bug */
-  transition:all 300ms ease-out;
+
+  &.scroller-items--animated {
+    transition:all 300ms ease-out;
+  }
 
   img {
     margin-bottom:0;
