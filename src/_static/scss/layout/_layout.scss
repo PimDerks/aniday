@@ -1,3 +1,6 @@
+/* HTML and body
+---------------------------------------------------------*/
+
 html {
   background:#171717 url("../assets/img/bg.jpg");
 }
@@ -7,6 +10,9 @@ body {
   background-size:100% auto;
   background-attachment:fixed;
 }
+
+/* Page header
+---------------------------------------------------------*/
 
 .page-content {
   position:relative;
@@ -19,10 +25,15 @@ body {
 
 }
 
+/* Landmark
+---------------------------------------------------------*/
 
 .landmark {
   margin-bottom:3em;
 }
+
+/* Page layout
+---------------------------------------------------------*/
 
 @include respond-min($breakpoint-m){
 
@@ -67,6 +78,8 @@ body {
 
 }
 
+/* Boxes
+---------------------------------------------------------*/
 
 .box {
   position:relative;
@@ -134,14 +147,65 @@ body {
 nav[role]{
   position:relative;
 }
-/* Footer
------------------------------------------------ */
+
+/* Page footer
+---------------------------------------------------------*/
 
 .page-footer {
   margin-top:3em;
 
   p {
     margin-bottom:0;
+  }
+
+  .page-footer__copyright,
+  .page-footer__social {
+    display:block;
+    text-align:center;
+  }
+
+  .page-footer__copyright .small {
+
+    &,
+    & a {
+      color:rgb(96,96,96);
+      text-decoration:none;
+    }
+
+  }
+
+}
+
+/* Page footer nav
+---------------------------------------------------------*/
+
+.page-footer__nav {
+
+  ul {
+    display:table;
+    table-layout:fixed;
+    width:100%;
+
+    > li {
+      display:table-cell;
+      text-align:center;
+    }
+
+  }
+
+  img {
+    height:1.5em;
+    margin-bottom:0;
+  }
+
+  a {
+    text-decoration:none;
+
+    &:focus,
+    &:hover {
+      text-decoration:underline;
+    }
+
   }
 
 }
