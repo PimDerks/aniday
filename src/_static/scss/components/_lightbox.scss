@@ -1,0 +1,96 @@
+/* Lightbox styles
+			   Will work in kind of all modern browsers that support Flexibox at all */
+.lightboxstage {
+  /* Covers entire page */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+
+  /* Hidden by default */
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+
+  /* Animate the lightbox by adding a fade transition */
+  -webkit-transition: opacity 0.2s ease;
+  -moz-transition: opacity 0.2s ease;
+  -ms-transition: opacity 0.2s ease;
+  -o-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+
+  /* Background of the lightbox is a dark overlay */
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* Magical loading text (could also be a spinner in the background etc.)
+   The magic: It is behind the image and naturally hidden when the image was loaded */
+.lightboxstage:after {
+  content: 'Loading...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* Center it horizontally, vertically doesn't really matter */
+  width: 50px;
+  text-align: center;
+  margin-left: -25px;
+}
+
+/* Fade in when shown */
+.lightboxstage.active {
+  height: auto;
+  opacity: 1;
+}
+
+/* Title */
+.lightboxstage span {
+  /* Position centered over the image */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 15px;
+  padding: 0 50px;
+  text-align: center;
+
+  font-size: 19px;
+}
+
+/* The image */
+.lightboxstage img {
+  /* Completely centered on the page */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  /* On top of the loading text */
+  z-index: 100;
+
+  /* Give the title some room */
+  padding-top: 32px;
+
+  /* Will automatically expand up to 82% of the page
+     (experimental choice, seems to look good) */
+  height: auto;
+  width: auto;
+  max-height: 82%;
+  max-width: 82%;
+}
+
+/* Give the image more room when the page is small */
+@media screen and (max-width: 500px) {
+  .lightboxstage img {
+    max-height: 90%;
+    max-width: 90%;
+
+    padding-top: 48px;
+  }
+}

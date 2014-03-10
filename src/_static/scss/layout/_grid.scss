@@ -10,6 +10,13 @@ $grid-gutter:4em;
 
 .wrapper__inner {
   padding:0 $grid-gutter;
+
+  > *:last-child,
+  > *:last-child > *:last-child,
+  > *:last-child > *:last-child > *:last-child {
+    margin-bottom:0;
+  }
+
 }
 
 .wrapper__inner--tb {

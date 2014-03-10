@@ -1,0 +1,8 @@
+<ul class="matrix-list matrix-list-s-2 matrix-list-m-3 matrix-list-l-4">
+    {% for x in (1..include.max) %}<li>
+        <a href="{{ site.path }}/_media/img/gallery/{{ include.url }}/large/{{ x }}.jpg" class="hover-box lightbox">
+            <img src="{{ site.path }}/_media/img/gallery/{{ include.url }}/thumb/{{ x }}.jpg" alt="" class="stacked" />
+            <span class="icon icon-plus"></span>
+        </a>
+    </li>{% endfor %}
+</ul>

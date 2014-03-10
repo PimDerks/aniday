@@ -100,7 +100,7 @@ h5,
   font-family:$font-open-sans;
   font-size:1em;
   font-weight:bold;
-  margin-bottom:.75rem;
+  @include rem(margin-bottom,.750rem);
   margin-top:0;
   position:relative;
 
@@ -120,7 +120,7 @@ h5,
   }
 
   &.header-section--alt {
-    padding-bottom:1.5rem;
+    @include rem(padding-bottom,1.5rem);
 
     &:after {
       border-bottom:.25em solid $color-primary;
@@ -129,7 +129,7 @@ h5,
       display:block;
       left:0;
       position:absolute;
-      width:3rem;
+      @include rem(width,3rem);
     }
 
   }
@@ -146,7 +146,7 @@ h5,
 }
 
 .subtitle {
-  margin-top:-.75rem;
+  @include rem(margin-top,-.75rem);
 
   &.subtitle--glued {
     margin-top:0;

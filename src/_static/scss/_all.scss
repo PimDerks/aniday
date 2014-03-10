@@ -3,6 +3,7 @@
 @import 'mixins/old-ie';
 @import 'mixins/respond';
 @import 'mixins/helpers';
+@import 'mixins/rem';
 
 /* Import core styles
 =============================================================================*/
@@ -34,4 +35,5 @@
 @import 'components/slideshow';
 @import 'components/timestamp';
 @import 'components/pagination';
+@import 'components/lightbox';
 

@@ -1,7 +1,7 @@
 .audiojs {
   cursor:pointer;
   overflow:hidden;
-  padding:.75rem;
+  @include rem(padding,.75rem);
   position:relative;
 
   button {
@@ -27,7 +27,7 @@
   }
 
   .audiojs__play-pause {
-    left:.25rem;
+    @include rem(left,.25rem);
     position:absolute;
   }
 
@@ -44,15 +44,15 @@
   .audiojs__scrubber {
     background:#131313;
     display:none;
-    margin-top:.75rem;
-    padding:.75rem;
+    @include rem(margin-top,.75rem);
+    @include rem(padding,.75rem);
     position:relative;
 
     .audiojs__scrubber__progress,
     .audiojs__scrubber__loaded {
       background:$color-primary;
       display:block;
-      height:.75rem;
+      @include rem(height,.75rem);
       width:0;
     }
 
