@@ -20,10 +20,12 @@
         </div>
     </div>
 
-    <div class="box-white">
-        <div class="wrapper">
-            {% include navigation/sub-navigation.html %}
+    {% if include.submenu %}
+        <div class="box-white">
+            <div class="wrapper">
+                {% include navigation/sub-navigation.html group=include.group %}
+            </div>
         </div>
-    </div>
+    {% endif %}
 
 </header>
