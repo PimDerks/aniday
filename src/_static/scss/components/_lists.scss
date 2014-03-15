@@ -4,22 +4,22 @@
 .vcalendar {
 
   .vcalendar__date {
-      width:15%;
+    width:15%;
+  }
+
+  .vcalendar__time {
+      width:10%;
   }
 
   .vcalendar__venue {
-    width:20%;
-  }
-
-  .vcalendar__comments {
     width:30%;
   }
 
-  .vcalendar__start {
-    width:10%;
+  .vcalendar__location {
+    width:30%;
   }
 
-  .vcalendar__website {
+  .vcalendar__more {
     width:15%;
   }
 

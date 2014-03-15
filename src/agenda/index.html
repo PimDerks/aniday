@@ -3,36 +3,35 @@ layout: events
 title: Agenda
 ---
 
-<h2 class="header-section header-section--alt">Agenda</h2>
+<h2 class="header-section header-section--alt">Binnenkort</h2>
 
 <table class="vcalendar">
     <thead>
         <tr>
             <th scope="col" class="vcalendar__date">Datum</th>
-            <th scope="col" class="vcalendar__location">Locatie/zaal</th>
-            <th scope="col" class="vcalendar__comments">Opmerkingen</th>
-            <th scope="col" class="vcalendar__start">Aanvang</th>
-            <th scope="col" class="vcalendar__website">Website</th>
+            <th scope="col" class="vcalendar__venue">Podium</th>
+            <th scope="col" class="vcalendar__location">Locatie</th>
+            <th scope="col" class="vcalendar__time">Aanvang</th>
+            <th scope="col" class="vcalendar__more">Meer info</th>
         </tr>
     </thead>
     <tbody>
         {% for y in (1..5) %}
             <tr>
                 <td scope="row">
-                    <time class="dtstart" datetime="2014-03-02">02-03-2014</time>
+                    <time class="dtstart dimmed" datetime="2014-03-02">02-03-2014</time>
                 </td>
                 <td>
-                    <span class="primary">P3 Purmerend</span><br />
-                    Purmerend
+                    <span class="primary bold">P3 Purmerend</span>
                 </td>
                 <td>
-                    Album-releaseparty.
+                    Purmerend, Noord-Holland
                 </td>
                 <td>
-                    20:00
+                    <span class="dimmed">20:00</span>
                 </td>
                 <td>
-                    <a href="http://www.p3purmerend.nl/aniday-cd-presentatie-2">Website P3</a>
+                    <a href="http://www.p3purmerend.nl/aniday-cd-presentatie-2">Meer info</a>
                 </td>
             </tr>
         {% endfor %}
@@ -46,30 +45,29 @@ title: Agenda
     <thead>
         <tr>
             <th scope="col" class="vcalendar__date">Datum</th>
-            <th scope="col" class="vcalendar__location">Locatie/zaal</th>
-            <th scope="col" class="vcalendar__comments">Opmerkingen</th>
-            <th scope="col" class="vcalendar__start">Aanvang</th>
-            <th scope="col" class="vcalendar__website">Website</th>
+            <th scope="col" class="vcalendar__venue">Podium</th>
+            <th scope="col" class="vcalendar__location">Locatie</th>
+            <th scope="col" class="vcalendar__time">Aanvang</th>
+            <th scope="col" class="vcalendar__more">Meer info</th>
         </tr>
     </thead>
     <tbody>
         {% for y in (1..5) %}
             <tr>
                 <td scope="row">
-                    <time class="dtstart" datetime="2014-03-02">02-03-2014</time>
+                    <time class="dtstart dimmed" datetime="2014-03-02">02-03-2014</time>
                 </td>
                 <td>
-                    <span class="primary">P3 Purmerend</span><br />
-                    Purmerend
+                    <span class="primary bold">P3 Purmerend</span>
                 </td>
                 <td>
-                    Album-releaseparty.
+                    Purmerend, Noord-Holland
                 </td>
                 <td>
-                    20:00
+                    <span class="dimmed">20:00</span>
                 </td>
                 <td>
-                    <a href="http://www.p3purmerend.nl/aniday-cd-presentatie-2">Website P3</a>
+                    <a href="http://www.p3purmerend.nl/aniday-cd-presentatie-2">Meer info</a>
                 </td>
             </tr>
         {% endfor %}
