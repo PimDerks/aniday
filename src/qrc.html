@@ -232,69 +232,6 @@ title: Quick Reference Card
         </div>
     </div>
 
-    <h2 id="meta" class="gamma">Profiel</h2>
-    <p class="subtitle delta">Marlies Schuitemaker</p>
-    <dl class="item-meta">
-        <dt>Titel</dt>
-        <dd>Born To Die</dd>
-        <dt>Datum</dt>
-        <dd>29 maart 2014</dd>
-        <dt>Label</dt>
-        <dd>Marlies Music Productions</dd>
-        <dt>Duur</dt>
-        <dd>51:49</dd>
-    </dl>
-    <h2 id="events">Events</h2>
-    <ol class="reset-list events">
-        {% assign var = 2014 %}
-        {% for x in (1..5) %}
-        <li>
-            <h3>
-                <span class="highlight">Optredens</span> {{ var | minus: x }}
-            </h3>
-            <table class="vcalendar">
-                <thead class="screenreader">
-                    <tr>
-                        <th scope="col">Datum</th>
-                        <th scope="col">Poster</th>
-                        <th scope="col">Locatie</th>
-                        <th scope="col">Informatie</th>
-                        <th scope="col">URL</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for y in (1..5) %}
-                    <tr>
-                        <td scope="row">
-                            <time class="dtstart" datetime="2014-03-02">02/03</time>
-                        </td>
-                        <td>
-                            <img src="http://www.dummyimage.com/80x80" alt="" />
-                        </td>
-                        <td>
-                            <span class="location">
-                                <span class="location__venue">P3</span>
-                                <span class="location__city">Purmerend, Noord Holland</span>
-                            </span>
-                        </td>
-                        <td>
-                            <a href="#">
-                                <span class="icon icon-zoom-in"></span>
-                            </a>
-                        </td>
-                        <td>
-                            <a href="#" class="button">
-                                Meer info
-                            </a>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </li>
-        {% endfor %}
-    </ol>
-
 </section>
 
 <section id="table">

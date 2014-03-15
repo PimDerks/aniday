@@ -1,48 +1,26 @@
-/* Events list
+/* Events table
 ---------------------------------------------------------*/
 
-.events {
-  position:relative;
-
-  > li {
-    text-align:center;
-  }
-
-  > li + li {
-    margin-top:1.5em;
-  }
-
-  &:after {
-    content:"";
-    border-left:1px dotted rgba(255,255,255,.25);
-    height:100%;
-    left:50%;
-    position:absolute;
-    top:0;
-  }
-
-}
-
 .vcalendar {
-  background:rgba(0,0,0,.5);
-  position:relative;
-  text-align:left;
-  width:100%;
-  z-index:1;
 
-  img {
-    height:4.5em;
-    margin-bottom:0;
+  .vcalendar__date {
+      width:15%;
   }
 
-  .location__venue,
-  .location__city {
-    display:block;
+  .vcalendar__venue {
+    width:20%;
   }
 
-  .location__venue {
-    color:$color-primary;
-    font-weight:bold;
+  .vcalendar__comments {
+    width:30%;
+  }
+
+  .vcalendar__start {
+    width:10%;
+  }
+
+  .vcalendar__website {
+    width:15%;
   }
 
 }

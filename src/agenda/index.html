@@ -1,13 +1,77 @@
 ---
-layout: default
-title: Your New Jekyll Site
+layout: events
+title: Agenda
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
+<h2 class="header-section header-section--alt">Agenda</h2>
+
+<table class="vcalendar">
+    <thead>
+        <tr>
+            <th scope="col" class="vcalendar__date">Datum</th>
+            <th scope="col" class="vcalendar__location">Locatie/zaal</th>
+            <th scope="col" class="vcalendar__comments">Opmerkingen</th>
+            <th scope="col" class="vcalendar__start">Aanvang</th>
+            <th scope="col" class="vcalendar__website">Website</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for y in (1..5) %}
+            <tr>
+                <td scope="row">
+                    <time class="dtstart" datetime="2014-03-02">02-03-2014</time>
+                </td>
+                <td>
+                    <span class="primary">P3 Purmerend</span><br />
+                    Purmerend
+                </td>
+                <td>
+                    Album-releaseparty.
+                </td>
+                <td>
+                    20:00
+                </td>
+                <td>
+                    <a href="http://www.p3purmerend.nl/aniday-cd-presentatie-2">Website P3</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<hr />
+
+<h2 class="header-section header-section--alt">Reeds gespeelde concerten</h2>
+
+<table class="vcalendar">
+    <thead>
+        <tr>
+            <th scope="col" class="vcalendar__date">Datum</th>
+            <th scope="col" class="vcalendar__location">Locatie/zaal</th>
+            <th scope="col" class="vcalendar__comments">Opmerkingen</th>
+            <th scope="col" class="vcalendar__start">Aanvang</th>
+            <th scope="col" class="vcalendar__website">Website</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for y in (1..5) %}
+            <tr>
+                <td scope="row">
+                    <time class="dtstart" datetime="2014-03-02">02-03-2014</time>
+                </td>
+                <td>
+                    <span class="primary">P3 Purmerend</span><br />
+                    Purmerend
+                </td>
+                <td>
+                    Album-releaseparty.
+                </td>
+                <td>
+                    20:00
+                </td>
+                <td>
+                    <a href="http://www.p3purmerend.nl/aniday-cd-presentatie-2">Website P3</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
