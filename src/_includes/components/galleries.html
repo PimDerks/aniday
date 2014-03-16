@@ -2,7 +2,8 @@
     Fotoalbums
 </h2>
 <ul class="matrix-list matrix-list-gutter matrix-list-s-1 matrix-list-m-3">
-    {% for node in site.pages %}{% if node.group == 'media' %}<li>
+    {% for node in site.pages %}{% if node.group == 'media' %}{% unless node.ignore %}<li>
+
             <a href="{{ node.url }}" class="hover-box">
                 <img src="{{ site.path }}/_media/img/gallery/{{ node.gallery.url }}/thumb/1.jpg" alt="" class="stacked" />
                 <span class="icon icon-plus"></span>
@@ -14,5 +15,5 @@
                 <p class="subtitle delta">{{ node.subtitle }}</p>
                 <a href="{{ node.url }}" class="button">Bekijk alle foto's</a>
             </div>
-        </li>{% endif %}{% endfor %}
+        </li>{% endunless %}{% endif %}{% endfor %}
 </ul>
