@@ -1,0 +1,18 @@
+<h2 class="header-section header-section--alt">
+    Fotoalbums
+</h2>
+<ul class="matrix-list matrix-list-gutter matrix-list-s-1 matrix-list-m-3">
+    {% for node in site.pages %}{% if node.group == 'media' %}<li>
+            <a href="{{ node.url }}" class="hover-box">
+                <img src="{{ site.path }}/_media/img/gallery/{{ node.gallery.url }}/thumb/1.jpg" alt="" class="stacked" />
+                <span class="icon icon-plus"></span>
+            </a>
+            <div class="box box-inner box-primary">
+                <h3>
+                    <a href="{{ node.url }}">{{ node.title }}</a>
+                </h3>
+                <p class="subtitle delta">{{ node.subtitle }}</p>
+                <a href="{{ node.url }}" class="button">Bekijk alle foto's</a>
+            </div>
+        </li>{% endif %}{% endfor %}
+</ul>
