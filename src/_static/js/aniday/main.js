@@ -6,9 +6,8 @@ requirejs.config({
     paths:{
         'conditioner':'../vendor/rikschennink/conditioner',
         'conditioner/tests':'../vendor/rikschennink/tests',
-        'audiojs':'../vendor/audiojs/audio.min',
-        'hammer':'../vendor/eightmedia/hammer',
-        'shadowbox':'../vendor/mjijackson/shadowbox'
+        //'audiojs':'../vendor/audiojs/audio.min',
+        'hammer':'../vendor/eightmedia/hammer'
     }
 });
 
@@ -17,9 +16,7 @@ requirejs.config({
  */
 if (!window._env){
     var _env = {
-        'version':'0.0.0',
-        'build':'0',
-        'port':''
+        'version':'2014-03-16'
     };
 }
 
@@ -31,7 +28,7 @@ if (!window._env){
     'use strict';
 
     requirejs.config({
-        urlArgs:'bust=v' + _env.version + 'b' + _env.build
+        urlArgs:'cache=' + _env.version
     });
 
 }());

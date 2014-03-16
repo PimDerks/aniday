@@ -1,4 +1,4 @@
-define(['conditioner','conditioner/Observer','audiojs','utils/Merge', 'utils/Element'],function(conditioner, Observer, AudioJS, Merge, Element){
+define(['conditioner','conditioner/Observer','utils/Merge', 'utils/Element'],function(conditioner, Observer, Merge, Element){
 
     'use strict';
 
@@ -14,7 +14,7 @@ define(['conditioner','conditioner/Observer','audiojs','utils/Merge', 'utils/Ele
         // Options
         var defaultOptions = {
             css: false,
-            swfLocation: '../' + 'audiojs.swf',
+            swfLocation: '/_static/js/vendor/audiojs/audiojs.swf',
             createPlayer: {
                 markup: '\
                 <div class="audiojs__play-pause"> \
@@ -50,7 +50,7 @@ define(['conditioner','conditioner/Observer','audiojs','utils/Merge', 'utils/Ele
         this._options = Merge(this._options, defaultOptions, false);
 
         var _this = this;
-        AudioJS.audiojs.events.ready(function() {
+        audiojs.events.ready(function() {
             _this._initialize();
         });
 
@@ -82,7 +82,7 @@ define(['conditioner','conditioner/Observer','audiojs','utils/Merge', 'utils/Ele
             Element.insertBefore(this._audio, this._element);
 
             // create player
-            this._player = AudioJS.audiojs.create(this._audio, this._options);
+            this._player = audiojs.create(this._audio, this._options);
 
             // listen to clicks on player
             this._player.wrapper.addEventListener('click', this._onClickPlayer.bind(this));
@@ -104,7 +104,7 @@ define(['conditioner','conditioner/Observer','audiojs','utils/Merge', 'utils/Ele
                 target = target.parentNode;
             }
 
-            if(target.nodeName.toLowerCase() != 'button'){
+            if(target.nodeName.toLowerCase() != 'button' && !this._player.playing){
                 this._player.playPause();
             }
 

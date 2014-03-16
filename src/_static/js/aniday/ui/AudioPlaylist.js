@@ -25,7 +25,7 @@ define(['conditioner','conditioner/Observer','ui/AudioPlayer'],function(conditio
         _initialize: function () {
 
             // get audio
-            this._audio = this._element.querySelectorAll('a');
+            this._audio = this._element.querySelectorAll('[href*=".mp3"]');
 
             // array with players
             this._players = [];
