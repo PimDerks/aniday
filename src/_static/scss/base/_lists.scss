@@ -42,6 +42,20 @@ dl {
   }
 }
 
+/* Nav
+ ----------------------------------------------- */
+.nav {
+  list-style:none none outside;
+  margin-left:0;
+  padding-left:0;
+
+  > li,
+  > li > a {
+    display:inline-block;
+  }
+
+}
+
 /* Link list
  ----------------------------------------------- */
 

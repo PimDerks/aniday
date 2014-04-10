@@ -25,32 +25,6 @@
 
 }
 
-/* Slideshow
----------------------------------------------------------*/
-.slideshow {
-
-  > li {
-    position:relative;
-
-    .hgroup {
-      left:3em;
-      position:absolute;
-      top:3em;
-    }
-
-    .hgroup--bottom {
-      bottom:4.5em;
-      top:auto;
-    }
-
-    .hgroup--right {
-      left:auto;
-      right:3em;
-    }
-
-  }
-
-}
 
 /* Item meta
 ---------------------------------------------------------*/
@@ -83,7 +57,7 @@
 .playlist {
 
   > li {
-    @include rem(padding,.75rem 3rem .75rem .75rem);
+    @include rem(padding,.75rem);
     position:relative;
   }
 
@@ -104,4 +78,21 @@
 
   }
 
+}
+
+/* Contact Info
+---------------------------------------------------------*/
+.contact-info {
+
+  dt {
+    color:$color-white;
+  }
+
+  dt ~ dt {
+    margin-top:1.5em;
+  }
+
+  dd {
+    margin-left:0;
+  }
 }

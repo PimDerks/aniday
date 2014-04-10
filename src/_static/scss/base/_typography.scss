@@ -47,6 +47,12 @@ body {
   text-shadow:0 1px 0 rgb(0,0,0);
 }
 
+@include respond-min($breakpoint-s){
+  body {
+    font-size:81.25%; /* 13 */
+  }
+}
+
 @include respond-min($breakpoint-m){
   body {
     font-size:87.5%; /* 14 */

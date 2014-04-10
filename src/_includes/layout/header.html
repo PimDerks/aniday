@@ -1,31 +1,31 @@
-<header class="page-header wrapper">
+<header class="page-header">
+    <div class="wrapper">
 
-    <div class="box box-inner group">
-        <h1 class="screenreader">Aniday</h1>
-        <div class="page-logo">
+        <div class="group">
+            <h1 class="screenreader">Aniday</h1>
+            <div class="page-logo">
 
-            {% unless page.group == 'home' %}
-                <a href="/" title="Homepage">
-            {% endunless %}
+                {% unless page.group == 'home' %}
+                    <a href="/" title="Homepage">
+                {% endunless %}
 
-                <img src="{{ site.path }}/_static/assets/svg/logo.svg" alt="Aniday" class="logo" />
+                    <img src="{{ site.path }}/_static/assets/svg/logo.svg" alt="Aniday" class="logo" />
 
-            {% unless page.group == 'home' %}
-                </a>
-            {% endunless %}
+                {% unless page.group == 'home' %}
+                    </a>
+                {% endunless %}
 
-        </div>
-        <div class="page-nav">
+            </div>
             {% include navigation/main-navigation.html %}
         </div>
-    </div>
 
-    {% if include.submenu %}
-        <div class="box-white">
-            <div class="wrapper">
-                {% include navigation/sub-navigation.html group=include.group %}
+        <!-- {% if include.submenu %}
+            <div class="box-white">
+                <div class="wrapper">
+                    {% include navigation/sub-navigation.html group=include.group %}
+                </div>
             </div>
-        </div>
-    {% endif %}
+        {% endif %} -->
 
+    </div>
 </header>

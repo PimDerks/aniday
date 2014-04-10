@@ -1,7 +1,41 @@
 .slideshow {
+  position:relative;
 
-  > li {
+  .scroller-paging {
+      bottom:0;
+      position:absolute;
+  }
+
+  .scroller-items > li {
+    position:relative;
     width:100%;
+  }
+
+  .hgroup {
+    left:0;
+    position:absolute;
+    top:9em;
+  }
+
+  .hgroup--bottom {
+    bottom:4.5em;
+    top:auto;
+  }
+
+  .hgroup--right {
+    left:auto;
+    right:0;
+  }
+
+  .hgroup--center {
+    top:50%;
+    transform:translateY(-50%);
+  }
+
+  .wrapper {
+    height:100%;
+    position:absolute;
+    top:0;
   }
 
   img {

@@ -19,6 +19,16 @@
     margin-bottom:0;
   }
 
+  &.hgroup--align-right {
+
+    h1,
+    h2,
+    .subtitle {
+      float:right;
+    }
+
+  }
+
   h1,
   h2 {
     color:$color-white;
