@@ -216,10 +216,13 @@ var Flexibox = function(links, options) {
     links.forEach(function(link) {
         // Add a click handler for this link
         addEvent(link, 'click', function(event) {
-            self.open(link.href, link.title);
 
             // Prevent redirection
+            event.stopPropagation();
             event.preventDefault();
+
+            self.open(link.href, link.title);
+
         });
     });
 };

@@ -3,16 +3,13 @@
 
 .main-navigation {
   background-color:rgba(0,0,0,.75);
+  display:block;
   left:-999em;
   list-style:none none outside;
   margin:0;
   padding-left:0;
   position:absolute;
   width:100%;
-
-  &.activated {
-    display:block;
-  }
 
   > li {
 

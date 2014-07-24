@@ -2,32 +2,114 @@
 ---------------------------------------------------------*/
 
 html {
-  background:#171717 url("../assets/img/bg.jpg");
+  background:#171717 url("../assets/img/bg-pattern.jpg");
 }
 
 body {
-  background:transparent url("../assets/img/bg2.jpg") no-repeat top right;
+  background:transparent url("../assets/img/bg-pattern.jpg") no-repeat top right;
   background-size:cover;
   background-attachment:fixed;
 }
 
 html,
 body {
+  height:100%;
   min-height:100%;
 }
 
-body {
-  @include rem(padding-top,5rem);
+.page-section {
+  @include rem(padding-bottom,4.5rem);
+  background-attachment:scroll;
+  background-repeat:no-repeat;
+  background-position:center 5.5em;
+  background-size:100% auto;
+  border-top:.25em solid $color-primary;
+  box-shadow:0 0 10em rgba(0,0,0,.75) inset;
+  min-height:100%;
+  overflow:hidden;
+  position:relative;
 }
 
-@include respond-min($breakpoint-l){
+.article {
+  background-image:url("../assets/img/photo1.jpg"); background-position:top center; background-repeat:no-repeat; background-size:100% auto;
+}
 
-  body {
-    @include rem(padding-top,6rem);
+.article .hgroup {
+  padding:15rem;
+}
+
+.page-section--header { background-image:url("../assets/img/photo4.jpg"); background-position:center center; border-top-width:0; background-attachment:fixed; }
+.page-section--bio { background-image:url("../assets/img/photo1.jpg"); }
+.page-section--music { background-image:url("../assets/img/photo2.jpg");}
+.page-section--band { background-image:url("../assets/img/photo3.jpg");}
+.page-section--gallery { background-image:url("../assets/img/photo3.jpg"); }
+.page-section--shop { background-image:url("../assets/img/photo5.jpg"); }
+.page-section--contact { background-image:url("../assets/img/photo2.jpg"); }
+
+@include respond-min($breakpoint-s){
+
+  .page-section-intro {
+
+    .hgroup {
+      @include rem(margin,7.5rem 0);
+    }
+
   }
 
 }
 
+@include respond-min($breakpoint-l){
+
+  .page-section-intro {
+    margin:0 auto;
+    width:gs-width(da, 1, 8, false, true);
+
+    .hgroup {
+      @include rem(margin,15rem 0);
+    }
+
+  }
+
+}
+
+@keyframes arrow {
+  0%    { top:75%; }
+  50%   { top:80%; }
+  100%  { top:75%; }
+}
+
+.page-section--header {
+  text-align:center;
+
+  .arrow {
+    animation:arrow 2500ms infinite ease-out;
+    background:black;
+    border:.25em solid red;
+    border-radius:50%;
+    box-shadow:0 0 1.5em rgba(0,0,0,.5);
+    height:6em;
+    left:50%;
+    margin-left:-3em;
+    position:absolute;
+    top:75%;
+    width:6em;
+
+    &:before {
+      border:1.25em solid transparent;
+      border-top:2em solid white;
+      content:"";
+      display:block;
+      left:50%;
+      margin:-.75em 0 0 -1.25em;
+      height:0;
+      position:absolute;
+      top:50%;
+      width:0;
+    }
+
+  }
+
+}
 /* Page header
 ---------------------------------------------------------*/
 
@@ -59,14 +141,12 @@ body {
   box-shadow:0 .25em .25em rgba(0,0,0,.15);
   left:0;
   margin:0 auto;
+  opacity:1;
   position:fixed;
   top:0;
+  transition:all 1500ms ease-out;
   width:100%;
   z-index:1000;
-
-  .page-logo {
-    @include gs-span(m, 1, 1, false, true);
-  }
 
   img {
     @include rem(height,2rem);
@@ -161,11 +241,7 @@ body {
 }
 
 .box-black {
-  background:rgba(0,0,0,.5);
-}
-
-.box-black-extra {
-  background:rgba(0,0,0,.9);
+  background:rgba(0,0,0,.75);
 }
 
 .box-primary {
@@ -195,7 +271,7 @@ body {
 ---------------------------------------------------------*/
 
 .page-footer {
-  margin-top:3em;
+  background:black;
 
   p {
     margin-bottom:0;

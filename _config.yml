@@ -4,3 +4,29 @@ permalink: /nieuws/:title
 include: ['_static']
 paginate: 6
 paginate_path: /nieuws/pagina-:num
+
+music:
+  - title: Can't Take No More
+    file: 01.mp3
+  - title: Hole In My Heart
+    file: 02.mp3
+  - title: When Loving You Is Wrong
+    file: 03.mp3
+  - title: Buscando La Vida
+    file: 04.mp3
+  - title: Born Yesterday
+    file: 05.mp3
+  - title: We Belong
+    file: 06.mp3
+  - title: Don't Fool With Me
+    file: 07.mp3
+  - title: Dream On
+    file: 08.mp3
+  - title: Not Much Of A Man
+    file: 09.mp3
+  - title: Get Funky
+    file: 10.mp3
+  - title: Leave Me With Your Lies
+    file: 11.mp3
+  - title: Lost The Way
+    file: 12.mp3

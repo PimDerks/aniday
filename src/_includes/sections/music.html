@@ -1,0 +1,42 @@
+<section class="page-section page-section--music" id="music">
+    <div class="wrapper">
+
+        <div class="page-section-intro">
+
+            <div class="hgroup group">
+
+                <h2 class="kilo">
+                    Music
+                </h2>
+                <p class="subtitle subtitle--glued alpha">
+                    Listen to our album
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="music-artwork">
+
+            <h3 class="header-section header-section--alt screenreader">Artwork</h3>
+            <img src="{{ site.path }}/_media/img/album.jpg" alt="Aniday - Album Artwork" />
+
+        </div>
+
+        <div class="music-player box box-black box-inner box-inner--xl">
+
+            <ol data-module="ui/AudioPlaylist" data-audio-player="audio-player" class="playlist reset-list border-list">
+                {% for track in site.music %}
+                <li>
+                    <a href="{{ site.path }}/_media/audio/{{ track.file }}" class="audio-link">
+                        {{ track.title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ol>
+
+        </div>
+
+    </div>
+
+</section>

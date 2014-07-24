@@ -12,6 +12,9 @@
 
   h1,
   h2,
+  h3,
+  h4,
+  h5,
   .subtitle {
     background:rgba(0,0,0,.75);
     clear:both;
@@ -23,6 +26,9 @@
 
     h1,
     h2,
+    h3,
+    h4,
+    h5,
     .subtitle {
       float:right;
     }
@@ -30,7 +36,10 @@
   }
 
   h1,
-  h2 {
+  h2,
+  h3,
+  h4,
+  h5 {
     color:$color-white;
     font-weight:bolder;
     @include rem(padding,.75rem 1.5rem);

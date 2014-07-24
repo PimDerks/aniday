@@ -44,3 +44,44 @@
   }
 
 }
+
+.slideshow--band {
+
+  .wrapper {
+    @include rem(top,12rem);
+  }
+
+  .scroller-items > li {
+    width:30%;
+
+    .hgroup {
+      bottom:3em;
+      left:3em;
+      opacity:0;
+      top:auto;
+      transition:opacity 500ms ease-out;
+      z-index:1;
+    }
+
+    img {
+      transform:scale(1);
+      transition:transform 500ms ease-out;
+    }
+
+    &:hover {
+
+      .hgroup {
+        opacity:1;
+      }
+
+      img {
+        transform:scale(1.05);
+      }
+
+    }
+
+  }
+
+
+
+}

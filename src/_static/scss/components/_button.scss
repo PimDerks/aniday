@@ -1,12 +1,12 @@
-.button {
+.button,
+button {
   background:$color-primary;
   border-radius:.25em;
+  border-width:0;
   box-shadow:0 1px 0 rgba(255,255,255,.25) inset;
   color:$color-white;
   display:inline-block;
   font-weight:bold;
-  font-size:.78888em; /* 14/18 */
-  line-height:1.9286em; /* 27/14 */
   padding:0 .5em;
   text-shadow:0 -1px 0 rgb(0,0,0);
 

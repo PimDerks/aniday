@@ -58,3 +58,23 @@
 .stacked {
   margin-bottom:0 !important;
 }
+
+/* Vertical align container
+----------------------------------------------- */
+.wrapper--cover {
+  height:100%;
+  position:absolute;
+  top:0;
+}
+
+.va-container {
+  display:table;
+  height:100%;
+  width:100%;
+
+  .va-container-inner {
+    display:table-cell;
+    vertical-align:middle;
+  }
+
+}

@@ -1,0 +1,42 @@
+<section class="page-section page-section--gallery" id="gallery">
+
+    <div class="wrapper">
+        <div class="page-section-intro">
+
+            <div class="hgroup group">
+
+                <h2 class="kilo">
+                    Gallery
+                </h2>
+                <p class="subtitle subtitle--glued alpha">
+                    Lorem ipsum dolor sit amet.
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wrapper">
+
+        <ul class="matrix-list matrix-list-gutter gallery-list">
+            {% for x in (0..12) %}<li>
+                <a href="http://www.dummyimage.com/500x500/" class="lightbox">
+                    <img src="http://www.dummyimage.com/300x300/" alt="" class="stacked" />
+                </a>
+            </li>{% endfor %}
+        </ul>
+
+    </div>
+
+</section>
+
+<div class="lightboxstage">
+    <span></span>
+    <img src="#" alt="">
+</div>
+
+<script src="{{ site.path }}/_static/js/vendor/vis7mac/flexibox.js"></script>
+<script>
+    var lightbox = new Flexibox(document.querySelectorAll('.lightbox'), {debug: true});
+</script>

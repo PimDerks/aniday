@@ -66,6 +66,9 @@ define(['module', 'conditioner/Observer', 'ui/Toggle','ui/ToggleManager','utils/
 
     p._onClick = function(e){
 
+        e.preventDefault();
+        e.stopPropagation();
+
         this._toggleTargetToggle();
         this.activate()
 

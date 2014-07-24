@@ -160,6 +160,21 @@ h5,
 
 }
 
+.giga {
+  font-size:4em; /* 72/18 */
+  line-height:1.5em; /* 72/48 */
+}
+
+.mega {
+  font-size:3.3333em; /* 60/18 */
+  line-height:1.5em; /* 72/48 */
+}
+
+.kilo {
+  font-size:2.6667em; /* 48/18 */
+  line-height:1.5em; /* 72/48 */
+}
+
 h1,
 .alpha {
   font-size:2em; /* 36/18 */
@@ -200,6 +215,10 @@ p {
 .lead {
   color:$color-white;
   font-weight:bold;
+}
+
+.center {
+  text-align:center;
 }
 
 /* Links
