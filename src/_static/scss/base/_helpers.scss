@@ -61,7 +61,9 @@
 
 /* Vertical align container
 ----------------------------------------------- */
-.wrapper--cover {
+.wrapper.wrapper--cover {
+  margin-left:-512px;
+  left:50%;
   height:100%;
   position:absolute;
   top:0;

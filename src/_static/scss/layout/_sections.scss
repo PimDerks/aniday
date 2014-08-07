@@ -213,4 +213,12 @@
     width:gs-width(da, 1, 8, false, true);
   }
 
+  .contact-bookings {
+    @include gs-span(da, 1, 4, false, true);
+  }
+
+  .contact-social {
+    @include gs-span(da, 5, 8, false, true);
+  }
+
 }
