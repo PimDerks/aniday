@@ -309,3 +309,22 @@ hr {
   clear:both;
   margin:3em 0;
 }
+
+blockquote {
+  color:#FFF;
+  font-size:1.1em;
+
+  &:before,
+  &:after {
+    content:"“";
+  }
+
+  &:after {
+    content:"”";
+  }
+
+  + p {
+    text-align:center;
+  }
+
+}

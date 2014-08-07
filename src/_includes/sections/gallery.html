@@ -9,7 +9,7 @@
                     Gallery
                 </h2>
                 <p class="subtitle subtitle--glued alpha">
-                    Lorem ipsum dolor sit amet.
+                    For your viewing pleasure
                 </p>
 
             </div>
@@ -19,10 +19,14 @@
 
     <div class="wrapper">
 
+        <p>
+            All images shot by <a href="http://www.timtronckoe.com">Tim Tronckoe</a>
+        </p>
+
         <ul class="matrix-list matrix-list-gutter gallery-list">
-            {% for x in (0..12) %}<li>
-                <a href="http://www.dummyimage.com/500x500/" class="lightbox">
-                    <img src="http://www.dummyimage.com/300x300/" alt="" class="stacked" />
+            {% for x in (1..9) %}<li>
+                <a href="/_media/img/gallery/large/{{ x }}.jpg" class="lightbox">
+                    <img src="/_media/img/gallery/thumb/{{ x }}.jpg" alt="" class="stacked" />
                 </a>
             </li>{% endfor %}
         </ul>
