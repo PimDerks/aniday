@@ -7,7 +7,6 @@ html {
 
 body {
   background:transparent url("../assets/img/bg-pattern.jpg") no-repeat top right;
-  background-size:cover;
   background-attachment:fixed;
 }
 
@@ -21,8 +20,7 @@ body {
   @include rem(padding-bottom,4.5rem);
   background-attachment:scroll;
   background-repeat:no-repeat;
-  background-position:center 5.5em;
-  background-size:100% auto;
+  background-position:center 4.5em;
   border-top:.25em solid $color-primary;
   box-shadow:0 0 10em rgba(0,0,0,.75) inset;
   min-height:100%;
